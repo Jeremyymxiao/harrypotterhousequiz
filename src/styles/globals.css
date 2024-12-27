@@ -12,6 +12,16 @@
 }
 
 @layer base {
+  /* 全局光标样式 */
+  * {
+    cursor: url('/cursors/wand.png'), auto;
+  }
+
+  /* 可点击元素的光标样式 */
+  a, button, [role="button"], input[type="submit"], input[type="button"], input[type="reset"] {
+    cursor: url('/cursors/wand-glow.png'), pointer;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'HarryPotter', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   }

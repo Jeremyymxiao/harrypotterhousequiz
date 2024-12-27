@@ -65,7 +65,12 @@ export default function QuizComponent() {
               onClick={() => handleAnswer(answer.scores)}
               className="w-full p-4 text-left text-amber-200 bg-gray-800/90 border border-amber-400 rounded-lg
                          hover:bg-amber-400/20 hover:transform hover:-translate-y-0.5 transition-all duration-300
-                         hover:shadow-[0_4px_12px_rgba(196,180,84,0.2)]"
+                         hover:shadow-[0_4px_12px_rgba(255,255,255,0.4),0_0_30px_rgba(255,215,0,0.6)] 
+                         relative after:absolute after:content-[''] after:w-8 after:h-8 
+                         after:right-4 after:top-1/2 after:-translate-y-1/2
+                         after:transition-all after:duration-300
+                         hover:after:bg-gradient-to-r hover:after:from-transparent 
+                         hover:after:to-amber-200/50 hover:after:blur-md"
             >
               {answer.text}
             </button>
