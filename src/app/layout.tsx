@@ -6,7 +6,7 @@ export const metadata = {
     template: '%s | Harry Potter House Quiz'
   },
   description: 'Take our magical Harry Potter Sorting Hat Quiz to discover your true Hogwarts house. Whether you\'re a brave Gryffindor, wise Ravenclaw, loyal Hufflepuff, or ambitious Slytherin, find out where you truly belong!',
-  keywords: ['Harry Potter quiz', 'Hogwarts house quiz', 'sorting hat test', 'which Hogwarts house am I', 'Gryffindor', 'Slytherin', 'Hufflepuff', 'Ravenclaw', 'personality quiz'],
+  keywords: ['Harry Potter, Hogwarts House, Sorting Hat, Harry Potter quiz, magical journey, house sorting quiz, discover Hogwarts house, wizarding world'],
   authors: [{ name: 'Hogwarts Quiz Team' }],
   creator: 'Hogwarts Quiz Team',
   publisher: 'Hogwarts Quiz Team',

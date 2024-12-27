@@ -44,6 +44,16 @@ export default function QuizComponent() {
   return (
     <div className="relative min-h-screen flex items-center justify-center p-8 font-['Cinzel']">
       <div className="relative z-10 max-w-3xl w-full bg-gray-900/30 border-2 border-amber-400 rounded-2xl p-8 shadow-[0_0_20px_rgba(196,180,84,0.3)] backdrop-blur-md">
+        <div className="flex justify-between mb-4">
+          <button
+            onClick={() => router.push('/')}
+            className="magic-button px-4 py-2 text-amber-200 border-2 border-amber-400 rounded-lg 
+                     hover:bg-amber-400/20 transition-all duration-300 
+                     backdrop-blur-sm bg-black/30"
+          >
+            Return Home
+          </button>
+        </div>
         <div className="flex justify-between text-amber-400 text-sm mb-2">
           <span>Question {currentQuestion + 1}/{questions.length}</span>
           <span>{Math.round(((currentQuestion + 1) / questions.length) * 100)}%</span>
