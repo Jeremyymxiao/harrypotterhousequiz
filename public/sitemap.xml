@@ -1,1 +1,155 @@
- 
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- English pages -->
+  <url>
+    <loc>https://harrypotterhousequiz.pro/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/quiz</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/quiz"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/quiz"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/quiz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/quiz"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/result</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/result"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/result"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/result"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/result"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ask-sorting-hat</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/ask-sorting-hat"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/ask-sorting-hat"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/ask-sorting-hat"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/ask-sorting-hat"/>
+  </url>
+
+  <!-- Chinese pages -->
+  <url>
+    <loc>https://harrypotterhousequiz.pro/zh</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/zh/quiz</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/quiz"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/quiz"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/quiz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/quiz"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/zh/result</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/result"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/result"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/result"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/result"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/zh/ask-sorting-hat</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/ask-sorting-hat"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/ask-sorting-hat"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/ask-sorting-hat"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/ask-sorting-hat"/>
+  </url>
+
+  <!-- Korean pages -->
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ko</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ko/quiz</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/quiz"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/quiz"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/quiz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/quiz"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ko/result</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/result"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/result"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/result"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/result"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ko/ask-sorting-hat</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/ask-sorting-hat"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/ask-sorting-hat"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/ask-sorting-hat"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/ask-sorting-hat"/>
+  </url>
+
+  <!-- Russian pages -->
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ru</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ru/quiz</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/quiz"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/quiz"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/quiz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/quiz"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ru/result</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/result"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/result"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/result"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/result"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ru/ask-sorting-hat</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/ask-sorting-hat"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/ask-sorting-hat"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/ask-sorting-hat"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/ask-sorting-hat"/>
+  </url>
+</urlset> 

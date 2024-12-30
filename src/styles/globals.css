@@ -11,6 +11,33 @@
   font-display: swap;
 }
 
+/* 添加中文魔法字体 */
+@font-face {
+  font-family: 'MagicChinese';
+  src: url('/fonts/MaShanZheng-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 添加韩文魔法字体 */
+@font-face {
+  font-family: 'MagicKorean';
+  src: url('/fonts/EastSeaDokdo-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 添加俄文魔法字体 */
+@font-face {
+  font-family: 'MagicRussian';
+  src: url('/fonts/Ruslan-Display.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   /* 全局光标样式 */
   * {
@@ -30,6 +57,18 @@
 @layer components {
   .font-harry {
     font-family: 'HarryPotter', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  .font-magic-zh {
+    font-family: 'MagicChinese', 'HarryPotter', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  .font-magic-ko {
+    font-family: 'MagicKorean', 'HarryPotter', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  .font-magic-ru {
+    font-family: 'MagicRussian', 'HarryPotter', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   }
 
   .quiz-bg {

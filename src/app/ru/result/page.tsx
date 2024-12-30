@@ -4,6 +4,9 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { HOUSES, type HouseName } from '@/types/houses'
+import { getCurrentLanguage } from '@/utils/language'
+import { usePathname } from 'next/navigation'
+import { ru } from '@/i18n/translations/ru'
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -16,6 +19,9 @@ import {
 export default function ResultPage() {
   const [house, setHouse] = useState<HouseName | null>(null)
   const [shareUrl, setShareUrl] = useState('')
+  const pathname = usePathname()
+  const currentLang = getCurrentLanguage(pathname)
+  const t = ru // 俄文翻译
 
   useEffect(() => {
     const result = localStorage.getItem('quizResult') as HouseName
@@ -28,7 +34,7 @@ export default function ResultPage() {
     return (
       <div className="magic-bg min-h-screen flex items-center justify-center">
         <div className="magic-card p-8">
-          <div className="text-2xl text-amber-400 animate-pulse font-harry">Loading...</div>
+          <div className="text-2xl text-amber-400 animate-pulse font-magic-ru">Загрузка...</div>
         </div>
       </div>
     )
@@ -41,43 +47,43 @@ export default function ResultPage() {
       <div className="magic-particles" />
       
       <div className="max-w-2xl w-full space-y-8 magic-card p-8 text-center">
-        <h1 className="text-4xl font-bold text-amber-400 mb-6 floating font-harry tracking-wider">
-          Your Sorting Result
+        <h1 className="text-4xl font-bold text-amber-400 mb-6 floating font-magic-ru tracking-wider">
+          {t.result.yourHouse}
         </h1>
 
         <div className="space-y-6 floating">
           <div className="relative w-48 h-48 mx-auto mb-6">
             <Image
               src={`/images/houses/${house.toLowerCase()}-crest.png`}
-              alt={`${houseData.displayName} Crest`}
+              alt={`Герб ${houseData.displayName[currentLang]}`}
               fill
               className="object-contain"
               priority
             />
           </div>
           
-          <h2 className="text-5xl font-bold font-harry tracking-wide" style={{ color: houseData.colors.primary }}>
-            {houseData.displayName}
+          <h2 className="text-5xl font-bold font-magic-ru tracking-wide" style={{ color: houseData.colors.primary }}>
+            {houseData.displayName[currentLang]}
           </h2>
           
-          <p className="text-3xl text-gray-300 font-harry tracking-wide">
-            {houseData.description}
+          <p className="text-3xl text-gray-300 font-magic-ru tracking-wide">
+            {houseData.description[currentLang]}
           </p>
         </div>
 
         <div className="pt-8 space-x-4">
           <Link
-            href="/"
-            className="magic-button inline-block px-6 py-3 text-white bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-200"
+            href="/ru"
+            className="magic-button inline-block px-6 py-3 text-white bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-200 font-magic-ru"
           >
-            Back to Home
+            {t.common.returnHome}
           </Link>
           
           <Link
-            href="/quiz"
-            className="magic-button inline-block px-6 py-3 text-white bg-amber-600 rounded-lg hover:bg-amber-500 transition-colors duration-200"
+            href="/ru/quiz"
+            className="magic-button inline-block px-6 py-3 text-white bg-amber-600 rounded-lg hover:bg-amber-500 transition-colors duration-200 font-magic-ru"
           >
-            Take Quiz Again
+            {t.result.retake}
           </Link>
         </div>
 
@@ -92,7 +98,7 @@ export default function ResultPage() {
 
           <TwitterShareButton
             url={shareUrl}
-            title={`I've been sorted into ${houseData.displayName} at Hogwarts! Take the quiz to find out your house! 🧙‍♂️✨`}
+            title={`Я попал(а) в ${houseData.displayName[currentLang]} в Хогвартсе! Узнай, в каком факультете ты! 🧙‍♂️✨`}
             className="hover:opacity-80 transition-opacity"
           >
             <TwitterIcon size={40} round />
@@ -100,7 +106,7 @@ export default function ResultPage() {
 
           <WhatsappShareButton
             url={shareUrl}
-            title={`I've been sorted into ${houseData.displayName} at Hogwarts! Take the quiz to find out your house! 🧙‍♂️✨`}
+            title={`Я попал(а) в ${houseData.displayName[currentLang]} в Хогвартсе! Узнай, в каком факультете ты! 🧙‍♂️✨`}
             className="hover:opacity-80 transition-opacity"
           >
             <WhatsappIcon size={40} round />
@@ -109,4 +115,4 @@ export default function ResultPage() {
       </div>
     </main>
   )
-}
+} 
