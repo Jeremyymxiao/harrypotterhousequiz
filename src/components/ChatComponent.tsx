@@ -12,12 +12,18 @@ interface Message {
 export default function ChatComponent() {
   const router = useRouter()
   const messagesEndRef = useRef<HTMLDivElement>(null)
-  const [messages, setMessages] = useState<Message[]>([
-    {
+  const [messages, setMessages] = useState<Message[]>(() => {
+    if (typeof window !== 'undefined') {
+      const savedMessages = localStorage.getItem('chatMessages')
+      if (savedMessages) {
+        return JSON.parse(savedMessages)
+      }
+    }
+    return [{
       role: 'assistant',
       content: 'Hmm... Another student seeking guidance? Very well, what would you like to know about your potential house or anything else about Hogwarts?'
-    }
-  ])
+    }]
+  })
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
 
@@ -28,6 +34,12 @@ export default function ChatComponent() {
   useEffect(() => {
     scrollToBottom()
   }, [messages, isLoading])
+
+  useEffect(() => {
+    if (messages.length > 0) {
+      localStorage.setItem('chatMessages', JSON.stringify(messages))
+    }
+  }, [messages])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -108,7 +120,7 @@ export default function ChatComponent() {
           <h1 className="text-3xl text-amber-400 font-harry tracking-wider">The Sorting Hat</h1>
         </div>
 
-        <div className="h-[600px] overflow-y-auto mb-6 space-y-4 scrollbar-thin scrollbar-thumb-amber-400 scrollbar-track-transparent">
+        <div className="h-[calc(100vh-350px)] md:h-[calc(100vh-400px)] lg:h-[calc(100vh-450px)] overflow-y-auto mb-6 space-y-4 scrollbar-thin scrollbar-thumb-amber-400 scrollbar-track-transparent">
           {messages.map((message, index) => (
             <div
               key={index}

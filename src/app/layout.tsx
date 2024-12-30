@@ -34,6 +34,34 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebApplication',
+              'name': 'Harry Potter House Quiz',
+              'description': 'An interactive quiz to discover your Hogwarts house from the Harry Potter series',
+              'applicationCategory': 'Entertainment',
+              'operatingSystem': 'Web Browser',
+              'offers': {
+                '@type': 'Offer',
+                'price': '0',
+                'priceCurrency': 'USD'
+              },
+              'author': {
+                '@type': 'Organization',
+                'name': 'Hogwarts Quiz Team'
+              },
+              'potentialAction': {
+                '@type': 'UseAction',
+                'target': 'https://harrypotterhousequiz.pro/quiz'
+              }
+            })
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   )
