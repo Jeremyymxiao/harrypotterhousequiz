@@ -3,6 +3,7 @@ import LanguageNotification from '@/components/LanguageNotification'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { getCurrentLanguage } from '@/utils/language'
 import { headers } from 'next/headers'
+import { Analytics } from "@vercel/analytics/react"
 
 export async function generateMetadata({ params }: { params: any }) {
   const headersList = headers();
@@ -90,6 +91,7 @@ export default function RootLayout({
         <LanguageNotification />
         <LanguageSwitcher />
         {children}
+        <Analytics />
       </body>
     </html>
   )
