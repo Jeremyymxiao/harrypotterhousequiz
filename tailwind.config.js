@@ -25,6 +25,23 @@ module.exports = {
           secondary: '#000000',
         },
       },
+      fontFamily: {
+        'magic-zh': ['MaShanZheng', 'sans-serif'],
+        'magic-ko': ['East Sea Dokdo', 'sans-serif'],
+        'magic-ru': ['Ruslan Display', 'sans-serif'],
+        'magic-jp': ['Hachi Maru Pop', 'sans-serif'],
+        'magic-pt': ['Berkshire Swash', 'cursive'],
+        'harry': ['Harry Potter', 'sans-serif'],
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        }
+      },
+      animation: {
+        float: 'float 3s ease-in-out infinite',
+      }
     },
   },
   plugins: [],

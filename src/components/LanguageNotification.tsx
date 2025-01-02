@@ -3,30 +3,32 @@
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { getBrowserLanguage, getCurrentLanguage, shouldShowLanguageNotification, getAlternateLanguageUrl } from '@/utils/language';
+import { getBrowserLanguage, getCurrentLanguage, shouldShowLanguageNotification, getAlternateLanguageUrl, getLanguageDisplayName } from '@/utils/language';
 import { en } from '@/i18n/translations/en';
 import { zh } from '@/i18n/translations/zh';
 import { ko } from '@/i18n/translations/ko';
 import { ru } from '@/i18n/translations/ru';
+import { jp } from '@/i18n/translations/jp';
+import { pt } from '@/i18n/translations/pt';
 import { HiXMark } from 'react-icons/hi2';
 
-const translations = { en, zh, ko, ru } as const;
+const translations = { en, zh, ko, ru, jp, pt } as const;
 
 export default function LanguageNotification() {
   const [show, setShow] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const pathname = usePathname();
   const currentLang = getCurrentLanguage(pathname);
+  const browserLang = getBrowserLanguage();
   
   useEffect(() => {
-    const browserLang = getBrowserLanguage();
     const shouldShow = shouldShowLanguageNotification(currentLang, browserLang);
     setShow(shouldShow);
     // 添加延迟以实现平滑的出现动画
     if (shouldShow) {
       setTimeout(() => setIsVisible(true), 100);
     }
-  }, [currentLang]);
+  }, [currentLang, browserLang]);
 
   const handleDismiss = () => {
     setIsVisible(false);
@@ -38,6 +40,7 @@ export default function LanguageNotification() {
 
   const t = translations[currentLang];
   const alternateUrl = getAlternateLanguageUrl(pathname, currentLang);
+  const targetLanguageName = getLanguageDisplayName(browserLang, currentLang);
 
   return (
     <div 
@@ -47,7 +50,7 @@ export default function LanguageNotification() {
       <div className="flex items-center gap-4 px-6 py-3 rounded-lg border-2 border-amber-400 
                     backdrop-blur-sm bg-black/30 text-amber-200 shadow-lg">
         <p className="text-sm md:text-base">
-          {t.languageNotification.message}
+          {`${t.languageNotification.message} ${targetLanguageName}`}
         </p>
         <div className="flex items-center gap-4 ml-4">
           <Link

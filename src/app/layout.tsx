@@ -1,4 +1,5 @@
-import '@/styles/globals.css'
+import '@/app/globals.css'
+import '@/app/layout.css'
 import LanguageNotification from '@/components/LanguageNotification'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { getCurrentLanguage } from '@/utils/language'

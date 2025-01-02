@@ -1,4 +1,4 @@
-export type Language = 'en' | 'zh' | 'ko' | 'ru';
+export type Language = 'en' | 'zh' | 'ko' | 'ru' | 'jp' | 'pt';
 
 export const DEFAULT_LANGUAGE = 'en';
 
@@ -16,6 +16,12 @@ export function getBrowserLanguage(): Language {
   if (browserLang.startsWith('ru')) {
     return 'ru';
   }
+  if (browserLang.startsWith('ja')) {
+    return 'jp';
+  }
+  if (browserLang.startsWith('pt')) {
+    return 'pt';
+  }
   
   return DEFAULT_LANGUAGE;
 }
@@ -30,6 +36,12 @@ export function getCurrentLanguage(pathname: string): Language {
   if (pathname.startsWith('/ru')) {
     return 'ru';
   }
+  if (pathname.startsWith('/jp')) {
+    return 'jp';
+  }
+  if (pathname.startsWith('/pt')) {
+    return 'pt';
+  }
   return DEFAULT_LANGUAGE;
 }
 
@@ -38,15 +50,72 @@ export function shouldShowLanguageNotification(currentLang: Language, browserLan
 }
 
 export function getAlternateLanguageUrl(currentPath: string, currentLang: Language): string {
-  if (currentLang === 'en') {
-    return `/zh${currentPath}`;
+  const browserLang = getBrowserLanguage();
+  
+  // If current language is already browser language, default to English
+  if (currentLang === browserLang) {
+    return currentLang === 'en' ? currentPath : currentPath.replace(/^\/(zh|ko|ru|jp|pt)/, '');
   }
-  if (currentLang === 'zh') {
-    return `/ko${currentPath}`;
+  
+  // Switch to browser's language
+  if (browserLang === 'en') {
+    return currentPath.replace(/^\/(zh|ko|ru|jp|pt)/, '');
   }
-  if (currentLang === 'ko') {
-    return `/ru${currentPath}`;
-  }
-  // If current language is Russian, switch to English version
-  return currentPath.replace(/^\/(zh|ko|ru)/, '');
+  
+  return `/${browserLang}${currentPath.replace(/^\/(zh|ko|ru|jp|pt)/, '')}`;
+}
+
+export function getLanguageDisplayName(lang: Language, currentLang: Language): string {
+  const displayNames = {
+    en: {
+      en: 'English',
+      zh: 'Chinese',
+      ko: 'Korean',
+      ru: 'Russian',
+      jp: 'Japanese',
+      pt: 'Portuguese'
+    },
+    zh: {
+      en: '英文',
+      zh: '中文',
+      ko: '韩文',
+      ru: '俄文',
+      jp: '日文',
+      pt: '葡萄牙文'
+    },
+    ko: {
+      en: '영어',
+      zh: '중국어',
+      ko: '한국어',
+      ru: '러시아어',
+      jp: '일본어',
+      pt: '포르투갈어'
+    },
+    ru: {
+      en: 'английский',
+      zh: 'китайский',
+      ko: 'корейский',
+      ru: 'русский',
+      jp: 'японский',
+      pt: 'португальский'
+    },
+    jp: {
+      en: '英語',
+      zh: '中国語',
+      ko: '韓国語',
+      ru: 'ロシア語',
+      jp: '日本語',
+      pt: 'ポルトガル語'
+    },
+    pt: {
+      en: 'inglês',
+      zh: 'chinês',
+      ko: 'coreano',
+      ru: 'russo',
+      jp: 'japonês',
+      pt: 'português'
+    }
+  };
+
+  return displayNames[currentLang][lang];
 } 

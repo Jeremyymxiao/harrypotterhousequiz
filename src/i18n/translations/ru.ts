@@ -29,7 +29,7 @@ export const ru = {
     send: 'Отправить',
   },
   languageNotification: {
-    message: 'Этот контент также доступен на английском, китайском и корейском языках',
+    message: 'Этот контент также доступен на',
     switchLanguage: 'Сменить язык',
     dismiss: 'Закрыть',
   },

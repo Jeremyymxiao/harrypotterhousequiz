@@ -7,10 +7,12 @@ import { en } from '@/i18n/translations/en'
 import { zh } from '@/i18n/translations/zh'
 import { ko } from '@/i18n/translations/ko'
 import { ru } from '@/i18n/translations/ru'
+import { jp } from '@/i18n/translations/jp'
+import { pt } from '@/i18n/translations/pt'
 import { useEffect, useRef, useState } from 'react'
 import { HiGlobeAlt } from 'react-icons/hi2'
 
-const translations = { en, zh, ko, ru } as const
+const translations = { en, zh, ko, ru, jp, pt } as const
 
 interface LanguageOption {
   code: Language
@@ -26,7 +28,7 @@ const LANGUAGE_OPTIONS: LanguageOption[] = [
       if (currentPath.includes('/result')) {
         return '/result'
       }
-      return currentPath.replace(/^\/(?:zh|ko|ru)(?:\/|$)/, '/')
+      return currentPath.replace(/^\/(?:zh|ko|ru|jp|pt)(?:\/|$)/, '/')
     }
   },
   {
@@ -36,7 +38,7 @@ const LANGUAGE_OPTIONS: LanguageOption[] = [
       if (currentPath.includes('/result')) {
         return '/zh/result'
       }
-      const basePath = currentPath.replace(/^\/(?:zh|ko|ru)(?:\/|$)/, '/')
+      const basePath = currentPath.replace(/^\/(?:zh|ko|ru|jp|pt)(?:\/|$)/, '/')
       return `/zh${basePath === '/' ? '' : basePath}`
     }
   },
@@ -47,7 +49,7 @@ const LANGUAGE_OPTIONS: LanguageOption[] = [
       if (currentPath.includes('/result')) {
         return '/ko/result'
       }
-      const basePath = currentPath.replace(/^\/(?:zh|ko|ru)(?:\/|$)/, '/')
+      const basePath = currentPath.replace(/^\/(?:zh|ko|ru|jp|pt)(?:\/|$)/, '/')
       return `/ko${basePath === '/' ? '' : basePath}`
     }
   },
@@ -58,8 +60,30 @@ const LANGUAGE_OPTIONS: LanguageOption[] = [
       if (currentPath.includes('/result')) {
         return '/ru/result'
       }
-      const basePath = currentPath.replace(/^\/(?:zh|ko|ru)(?:\/|$)/, '/')
+      const basePath = currentPath.replace(/^\/(?:zh|ko|ru|jp|pt)(?:\/|$)/, '/')
       return `/ru${basePath === '/' ? '' : basePath}`
+    }
+  },
+  {
+    code: 'jp',
+    label: '日本語',
+    path: (currentPath) => {
+      if (currentPath.includes('/result')) {
+        return '/jp/result'
+      }
+      const basePath = currentPath.replace(/^\/(?:zh|ko|ru|jp|pt)(?:\/|$)/, '/')
+      return `/jp${basePath === '/' ? '' : basePath}`
+    }
+  },
+  {
+    code: 'pt',
+    label: 'Português',
+    path: (currentPath) => {
+      if (currentPath.includes('/result')) {
+        return '/pt/result'
+      }
+      const basePath = currentPath.replace(/^\/(?:zh|ko|ru|jp|pt)(?:\/|$)/, '/')
+      return `/pt${basePath === '/' ? '' : basePath}`
     }
   }
 ]
@@ -69,6 +93,7 @@ export default function LanguageSwitcher() {
   const pathname = usePathname()
   const currentLang = getCurrentLanguage(pathname)
   const dropdownRef = useRef<HTMLDivElement>(null)
+  const currentTranslation = translations[currentLang]
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -95,7 +120,7 @@ export default function LanguageSwitcher() {
         aria-label="Language Switcher"
       >
         <HiGlobeAlt size={24} className="mb-1" />
-        <span className="text-xs">Language</span>
+        <span className="text-xs">{currentTranslation.languageNotification.switchLanguage}</span>
       </button>
       
       {isOpen && (

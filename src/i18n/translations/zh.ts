@@ -28,7 +28,7 @@ export const zh = {
     send: '发送',
   },
   languageNotification: {
-    message: '本内容提供英文和韩文版本',
+    message: '本内容提供',
     switchLanguage: '切换语言',
     dismiss: '关闭',
   },

@@ -46,7 +46,7 @@ export default function ResultPage() {
     <main className="magic-bg min-h-screen flex items-center justify-center p-4">
       <div className="magic-particles" />
       
-      <div className="max-w-2xl w-full space-y-8 magic-card p-8 text-center">
+      <div className="max-w-2xl w-full space-y-8 bg-black/40 backdrop-blur-sm rounded-xl p-8 text-center">
         <h1 className="text-4xl font-bold text-amber-400 mb-6 floating font-magic-zh tracking-wider">
           {t.result.yourHouse}
         </h1>

@@ -9,8 +9,10 @@ import { en } from '@/i18n/translations/en'
 import { zh } from '@/i18n/translations/zh'
 import { ko } from '@/i18n/translations/ko'
 import { ru } from '@/i18n/translations/ru'
+import { jp } from '@/i18n/translations/jp'
+import { pt } from '@/i18n/translations/pt'
 
-const translations = { en, zh, ko, ru }
+const translations = { en, zh, ko, ru, jp, pt }
 
 const getFontClass = (lang: string) => {
   switch (lang) {
@@ -20,6 +22,10 @@ const getFontClass = (lang: string) => {
       return 'font-magic-ko'
     case 'ru':
       return 'font-magic-ru'
+    case 'jp':
+      return 'font-magic-jp'
+    case 'pt':
+      return 'font-magic-pt'
     default:
       return 'font-harry'
   }
@@ -68,7 +74,7 @@ export default function QuizComponent() {
   const question = questions[currentQuestion]
 
   return (
-    <div className={`relative min-h-screen flex items-center justify-center p-8 ${fontClass}`}>
+    <div className={`relative min-h-screen flex items-center justify-center p-8`}>
       <div className="relative z-10 max-w-3xl w-full bg-gray-900/30 border-2 border-amber-400 rounded-2xl p-8 shadow-[0_0_20px_rgba(196,180,84,0.3)] backdrop-blur-md">
         <div className="flex justify-between mb-4">
           <button
@@ -80,7 +86,7 @@ export default function QuizComponent() {
             {t.common.returnHome}
           </button>
         </div>
-        <div className="flex justify-between text-amber-400 text-sm mb-2">
+        <div className={`flex justify-between text-amber-400 text-sm mb-2 ${fontClass}`}>
           <span>{t.quiz.question} {currentQuestion + 1}/{questions.length}</span>
           <span>{Math.round(((currentQuestion + 1) / questions.length) * 100)}%</span>
         </div>
@@ -92,7 +98,7 @@ export default function QuizComponent() {
           />
         </div>
 
-        <h2 className={`text-2xl text-amber-200 mb-8 font-bold tracking-wide ${fontClass}`}>
+        <h2 className="text-2xl text-amber-200 mb-8 font-normal tracking-wide">
           {question.text[currentLang]}
         </h2>
 
@@ -108,7 +114,7 @@ export default function QuizComponent() {
                          after:right-4 after:top-1/2 after:-translate-y-1/2
                          after:transition-all after:duration-300
                          hover:after:bg-gradient-to-r hover:after:from-transparent 
-                         hover:after:to-amber-200/50 hover:after:blur-md ${fontClass}`}
+                         hover:after:to-amber-200/50 hover:after:blur-md font-normal`}
             >
               {answer.text[currentLang]}
             </button>

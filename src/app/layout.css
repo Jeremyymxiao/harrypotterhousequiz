@@ -1,9 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;500;600&display=swap');
 
+/* 魔法字体 */
+@font-face {
+  font-family: 'Harry Potter';
+  src: url('/fonts/HarryPotter.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MaShanZheng';
+  src: url('/fonts/MaShanZheng-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'East Sea Dokdo';
+  src: url('/fonts/EastSeaDokdo-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruslan Display';
+  src: url('/fonts/Ruslan-Display.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hachi Maru Pop';
+  src: url('/fonts/HachiMaruPop-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Berkshire Swash';
+  src: url('/fonts/BerkshireSwash-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --primary-gold: #c4b454;
   --secondary-gold: #e2d9bc;
   --dark-bg: #1c1917;
+}
+
+/* 自定义光标样式 */
+* {
+  cursor: url('/cursors/wand.png'), auto;
+}
+
+a, button, [role="button"], input[type="submit"], input[type="button"], input[type="reset"] {
+  cursor: url('/cursors/wand-glow.png'), pointer !important;
 }
 
 body {
@@ -13,6 +71,11 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--dark-bg);
   color: var(--secondary-gold);
+  background-image: url('/images/hogwarts-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 * {
@@ -22,4 +85,20 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Cinzel', serif;
   margin: 0;
+}
+
+.sorting-hat-bg {
+  background-image: url('/images/sort-hat.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.quiz-bg {
+  background-image: url('/images/sort-hat.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

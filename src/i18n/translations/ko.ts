@@ -33,7 +33,7 @@ export const ko = {
     send: '보내기',
   },
   languageNotification: {
-    message: '이 콘텐츠는 영어, 중국어, 러시아어로도 제공됩니다',
+    message: '이 콘텐츠는',
     switchLanguage: '언어 변경',
     dismiss: '닫기',
   },

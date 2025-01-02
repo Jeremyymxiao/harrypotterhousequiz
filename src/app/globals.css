@@ -4,6 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Harry Potter';
+  src: url('/fonts/HarryPotter.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 17, 24, 39;
@@ -11,7 +19,7 @@
 }
 
 .font-harry {
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: 'Harry Potter', cursive;
 }
 
 body {

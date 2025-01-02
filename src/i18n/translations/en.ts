@@ -27,7 +27,7 @@ export const en = {
     send: 'Send',
   },
   languageNotification: {
-    message: 'This content is also available in Chinese and Korean',
+    message: 'This content is also available in',
     switchLanguage: 'Switch Language',
     dismiss: 'Dismiss',
   },

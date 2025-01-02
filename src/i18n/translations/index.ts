@@ -1,0 +1,6 @@
+export { en } from './en'
+export { zh } from './zh'
+export { ko } from './ko'
+export { ru } from './ru'
+export { jp } from './jp'
+export { pt } from './pt' 

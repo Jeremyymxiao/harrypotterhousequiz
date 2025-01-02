@@ -8,8 +8,10 @@ import { en } from '@/i18n/translations/en'
 import { zh } from '@/i18n/translations/zh'
 import { ko } from '@/i18n/translations/ko'
 import { ru } from '@/i18n/translations/ru'
+import { jp } from '@/i18n/translations/jp'
+import { pt } from '@/i18n/translations/pt'
 
-const translations = { en, zh, ko, ru }
+const translations = { en, zh, ko, ru, jp, pt }
 
 interface Message {
   role: 'user' | 'assistant'
@@ -24,6 +26,10 @@ const getWelcomeMessage = (lang: string) => {
       return '흠... 또 다른 지도를 구하는 학생이군요? 좋아요, 당신이 속할 수 있는 기숙사나 호그와트에 대해 무엇을 알고 싶으신가요?'
     case 'ru':
       return 'Хмм... Еще один студент ищет совета? Хорошо, что бы вы хотели узнать о вашем потенциальном факультете или о чем-нибудь еще в Хогвартсе?'
+    case 'jp':
+      return 'ふむ... また生徒が助言を求めてきたのかい？よろしい、あなたの寮や他のホグワーツに関することについて、何を知りたいのかな？'
+    case 'pt':
+      return 'Hmm... Mais um aluno em busca de orientação? Muito bem, o que você gostaria de saber sobre sua possível casa ou qualquer outra coisa sobre Hogwarts?'
     default:
       return 'Hmm... Another student seeking guidance? Very well, what would you like to know about your potential house or anything else about Hogwarts?'
   }
@@ -121,6 +127,10 @@ export default function ChatComponent() {
               return `마법 연결에 문제가 있는 것 같습니다：${errorMessage || '죄송합니다, 마법 연결에 문제가 있는 것 같습니다. 다시 시도해보시겠어요?'}`
             case 'ru':
               return `Кажется, возникла проблема с магическим соединением：${errorMessage || 'Извините, кажется, возникла проблема с магическим соединением. Может быть, попробуете еще раз?'}`
+            case 'jp':
+              return `魔法の接続に問題があるようです：${errorMessage || '申し訳ありませんが、魔法の接続に問題があるようです。もう一度試してみてはいかがですか？'}`
+            case 'pt':
+              return `Parece que há um problema com a conexão mágica: ${errorMessage || 'Desculpe, parece que há um problema com a conexão mágica. Talvez tentar novamente?'}`
             default:
               return `There seems to be a problem with the magical connection: ${errorMessage || 'I apologize, there seems to be a problem with the magical connection. Perhaps try again?'}`
           }
@@ -165,6 +175,10 @@ export default function ChatComponent() {
                     return '분류 모자'
                   case 'ru':
                     return 'Распределяющая шляпа'
+                  case 'jp':
+                    return '分院帽'
+                  case 'pt':
+                    return '分院帽'
                   default:
                     return 'Sorting Hat'
                 }
@@ -204,6 +218,10 @@ export default function ChatComponent() {
                       return '분류 모자가 생각하고 있습니다...'
                     case 'ru':
                       return 'Распределяющая шляпа думает...'
+                    case 'jp':
+                      return '分院帽が考えています...'
+                    case 'pt':
+                      return 'A capa de classificação está pensando...'
                     default:
                       return 'The Sorting Hat is thinking...'
                   }
