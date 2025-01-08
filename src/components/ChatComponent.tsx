@@ -6,12 +6,13 @@ import { useRouter, usePathname } from 'next/navigation'
 import { getCurrentLanguage } from '@/utils/language'
 import { en } from '@/i18n/translations/en'
 import { zh } from '@/i18n/translations/zh'
+import { zhHant } from '@/i18n/translations/zhHant'
 import { ko } from '@/i18n/translations/ko'
 import { ru } from '@/i18n/translations/ru'
 import { jp } from '@/i18n/translations/jp'
 import { pt } from '@/i18n/translations/pt'
 
-const translations = { en, zh, ko, ru, jp, pt }
+const translations = { en, zh, 'zhHant': zhHant, ko, ru, jp, pt }
 
 interface Message {
   role: 'user' | 'assistant'
@@ -22,6 +23,8 @@ const getWelcomeMessage = (lang: string) => {
   switch(lang) {
     case 'zh':
       return '嗯... 又一个寻求指导的学生？好吧，你想了解什么关于你可能属于的学院或者霍格沃茨的其他事情？'
+    case 'zhHant':
+      return '嗯... 又一個尋求指導的學生？好吧，你想了解什麼關於你可能屬於的學院或者霍格華茲的其他事情？'
     case 'ko':
       return '흠... 또 다른 지도를 구하는 학생이군요? 좋아요, 당신이 속할 수 있는 기숙사나 호그와트에 대해 무엇을 알고 싶으신가요?'
     case 'ru':

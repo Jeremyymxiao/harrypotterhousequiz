@@ -35,7 +35,7 @@ export const pt = {
     send: 'Enviar',
   },
   languageNotification: {
-    message: 'Este conteúdo também está disponível em',
+    message: 'Este conteúdo também está disponível em inglês, chinês, coreano, russo e japonês',
     switchLanguage: 'Mudar Idioma',
     dismiss: 'Fechar',
   },

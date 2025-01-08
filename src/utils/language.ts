@@ -1,4 +1,4 @@
-export type Language = 'en' | 'zh' | 'ko' | 'ru' | 'jp' | 'pt';
+export type Language = 'en' | 'zh' | 'ko' | 'ru' | 'jp' | 'pt' | 'zhHant';
 
 export const DEFAULT_LANGUAGE = 'en';
 
@@ -7,6 +7,9 @@ export function getBrowserLanguage(): Language {
   
   const browserLang = navigator.language.toLowerCase();
   
+  if (browserLang === 'zh-tw' || browserLang === 'zh-hk') {
+    return 'zhHant';
+  }
   if (browserLang.startsWith('zh')) {
     return 'zh';
   }
@@ -27,6 +30,9 @@ export function getBrowserLanguage(): Language {
 }
 
 export function getCurrentLanguage(pathname: string): Language {
+  if (pathname.startsWith('/zhHant')) {
+    return 'zhHant';
+  }
   if (pathname.startsWith('/zh')) {
     return 'zh';
   }
@@ -54,22 +60,23 @@ export function getAlternateLanguageUrl(currentPath: string, currentLang: Langua
   
   // If current language is already browser language, default to English
   if (currentLang === browserLang) {
-    return currentLang === 'en' ? currentPath : currentPath.replace(/^\/(zh|ko|ru|jp|pt)/, '');
+    return currentLang === 'en' ? currentPath : currentPath.replace(/^\/(zhHant|zh|ko|ru|jp|pt)/, '');
   }
   
   // Switch to browser's language
   if (browserLang === 'en') {
-    return currentPath.replace(/^\/(zh|ko|ru|jp|pt)/, '');
+    return currentPath.replace(/^\/(zhHant|zh|ko|ru|jp|pt)/, '');
   }
   
-  return `/${browserLang}${currentPath.replace(/^\/(zh|ko|ru|jp|pt)/, '')}`;
+  return `/${browserLang}${currentPath.replace(/^\/(zhHant|zh|ko|ru|jp|pt)/, '')}`;
 }
 
 export function getLanguageDisplayName(lang: Language, currentLang: Language): string {
   const displayNames = {
     en: {
       en: 'English',
-      zh: 'Chinese',
+      zh: 'Chinese (Simplified)',
+      'zhHant': 'Chinese (Traditional)',
       ko: 'Korean',
       ru: 'Russian',
       jp: 'Japanese',
@@ -77,15 +84,26 @@ export function getLanguageDisplayName(lang: Language, currentLang: Language): s
     },
     zh: {
       en: '英文',
-      zh: '中文',
+      zh: '简体中文',
+      'zhHant': '繁體中文',
       ko: '韩文',
+      ru: '俄文',
+      jp: '日文',
+      pt: '葡萄牙文'
+    },
+    'zhHant': {
+      en: '英文',
+      zh: '簡體中文',
+      'zhHant': '繁體中文',
+      ko: '韓文',
       ru: '俄文',
       jp: '日文',
       pt: '葡萄牙文'
     },
     ko: {
       en: '영어',
-      zh: '중국어',
+      zh: '중국어 (간체)',
+      'zhHant': '중국어 (번체)',
       ko: '한국어',
       ru: '러시아어',
       jp: '일본어',
@@ -93,7 +111,8 @@ export function getLanguageDisplayName(lang: Language, currentLang: Language): s
     },
     ru: {
       en: 'английский',
-      zh: 'китайский',
+      zh: 'китайский (упрощенный)',
+      'zhHant': 'китайский (традиционный)',
       ko: 'корейский',
       ru: 'русский',
       jp: 'японский',
@@ -101,7 +120,8 @@ export function getLanguageDisplayName(lang: Language, currentLang: Language): s
     },
     jp: {
       en: '英語',
-      zh: '中国語',
+      zh: '中国語（簡体字）',
+      'zhHant': '中国語（繁体字）',
       ko: '韓国語',
       ru: 'ロシア語',
       jp: '日本語',
@@ -109,7 +129,8 @@ export function getLanguageDisplayName(lang: Language, currentLang: Language): s
     },
     pt: {
       en: 'inglês',
-      zh: 'chinês',
+      zh: 'chinês (simplificado)',
+      'zhHant': 'chinês (tradicional)',
       ko: 'coreano',
       ru: 'russo',
       jp: 'japonês',

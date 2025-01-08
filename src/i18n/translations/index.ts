@@ -1,5 +1,6 @@
 export { en } from './en'
 export { zh } from './zh'
+export { zhHant } from './zhHant'
 export { ko } from './ko'
 export { ru } from './ru'
 export { jp } from './jp'

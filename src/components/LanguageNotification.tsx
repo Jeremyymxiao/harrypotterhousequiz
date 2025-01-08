@@ -6,13 +6,14 @@ import Link from 'next/link';
 import { getBrowserLanguage, getCurrentLanguage, shouldShowLanguageNotification, getAlternateLanguageUrl, getLanguageDisplayName } from '@/utils/language';
 import { en } from '@/i18n/translations/en';
 import { zh } from '@/i18n/translations/zh';
+import { zhHant } from '@/i18n/translations/zhHant';
 import { ko } from '@/i18n/translations/ko';
 import { ru } from '@/i18n/translations/ru';
 import { jp } from '@/i18n/translations/jp';
 import { pt } from '@/i18n/translations/pt';
 import { HiXMark } from 'react-icons/hi2';
 
-const translations = { en, zh, ko, ru, jp, pt } as const;
+const translations = { en, zh, 'zhHant': zhHant, ko, ru, jp, pt } as const;
 
 export default function LanguageNotification() {
   const [show, setShow] = useState(false);

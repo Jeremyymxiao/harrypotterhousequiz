@@ -7,16 +7,18 @@ import { HOUSES, type HouseName } from '@/types/houses'
 import { getCurrentLanguage } from '@/utils/language'
 import { en } from '@/i18n/translations/en'
 import { zh } from '@/i18n/translations/zh'
+import { zhHant } from '@/i18n/translations/zhHant'
 import { ko } from '@/i18n/translations/ko'
 import { ru } from '@/i18n/translations/ru'
 import { jp } from '@/i18n/translations/jp'
 import { pt } from '@/i18n/translations/pt'
 
-const translations = { en, zh, ko, ru, jp, pt }
+const translations = { en, zh, 'zhHant': zhHant, ko, ru, jp, pt }
 
 const getFontClass = (lang: string) => {
   switch (lang) {
     case 'zh':
+    case 'zhHant':
       return 'font-magic-zh'
     case 'ko':
       return 'font-magic-ko'
