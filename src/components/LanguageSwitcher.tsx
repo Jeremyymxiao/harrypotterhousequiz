@@ -124,15 +124,14 @@ export default function LanguageSwitcher() {
   }, [isOpen])
 
   return (
-    <div className="fixed top-4 right-4 z-50" ref={dropdownRef}>
+    <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex flex-col items-center p-2 text-amber-200 border-2 border-amber-400 rounded-lg 
-                  hover:bg-amber-400/20 transition-all duration-300 backdrop-blur-sm bg-black/30"
+        className="flex items-center gap-2 p-2 text-amber-200 hover:text-amber-400 transition-colors duration-200"
         aria-label="Language Switcher"
       >
-        <HiGlobeAlt size={24} className="mb-1" />
-        <span className="text-xs">{currentTranslation.languageNotification.switchLanguage}</span>
+        <HiGlobeAlt size={20} />
+        <span className="text-sm">{currentTranslation.languageNotification.switchLanguage}</span>
       </button>
       
       {isOpen && (

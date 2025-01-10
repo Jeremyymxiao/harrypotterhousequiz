@@ -1,7 +1,8 @@
 import '@/app/globals.css'
 import '@/app/layout.css'
 import LanguageNotification from '@/components/LanguageNotification'
-import LanguageSwitcher from '@/components/LanguageSwitcher'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import { getCurrentLanguage } from '@/utils/language'
 import { headers } from 'next/headers'
 import { Analytics } from "@vercel/analytics/react"
@@ -192,10 +193,13 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>
+      <body className="flex flex-col min-h-screen">
         <LanguageNotification />
-        <LanguageSwitcher />
-        {children}
+        <Header />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
         <Analytics />
       </body>
     </html>
