@@ -1,17 +1,6 @@
 import { NextResponse } from 'next/server'
 import OpenAI from 'openai'
 
-const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY
-
-if (!DEEPSEEK_API_KEY) {
-  throw new Error('Missing DEEPSEEK_API_KEY environment variable')
-}
-
-const openai = new OpenAI({
-  baseURL: 'https://api.deepseek.com',
-  apiKey: DEEPSEEK_API_KEY,
-})
-
 const SYSTEM_PROMPT = `You are the Sorting Hat from Harry Potter. Your role is to engage in conversation with students, 
 helping them understand which Hogwarts house might suit them best. You should:
 1. Stay in character as the Sorting Hat at all times
@@ -32,6 +21,15 @@ Remember the key traits of each house:
 - Slytherin: Ambition, cunning, leadership, and resourcefulness`
 
 export async function POST(request: Request) {
+  const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY
+
+  if (!DEEPSEEK_API_KEY) {
+    return NextResponse.json(
+      { error: 'API key not configured' },
+      { status: 500 }
+    )
+  }
+
   try {
     const body = await request.json()
     const { messages } = body
@@ -42,6 +40,11 @@ export async function POST(request: Request) {
         { status: 400 }
       )
     }
+
+    const openai = new OpenAI({
+      baseURL: 'https://api.deepseek.com',
+      apiKey: DEEPSEEK_API_KEY,
+    })
 
     const completion = await openai.chat.completions.create({
       model: 'deepseek-chat',
