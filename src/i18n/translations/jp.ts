@@ -12,6 +12,40 @@ export const jp = {
     home: {
       welcome: 'ホグワーツへようこそ',
       description: '魔法のテストであなたの寮を見つけましょう',
+      features: {
+        title: '魔法の特徴',
+        advancedQuiz: {
+          title: '高度な寮分けテスト',
+          description: '魔法のテストで、あなたの性格と価値観を深く理解します。'
+        },
+        aiSortingHat: {
+          title: 'AI組分け帽子',
+          description: 'ホグワーツのように、インテリジェントな組分け帽子と魔法の会話を！'
+        },
+        detailedAnalysis: {
+          title: '詳細な分析',
+          description: '包括的な性格分析で、なぜあなたがその寮に属するのかを発見します。'
+        },
+        houseHistory: {
+          title: '寮の歴史',
+          description: 'あなたの寮の豊かな歴史、有名な寮生、そして特徴を学びましょう。'
+        }
+      },
+      faq: {
+        title: 'よくある質問',
+        accuracy: {
+          question: 'このハリーポッター寮テストは正確ですか？',
+          answer: '私たちのテストは、最も正確な寮の配属を確保するために、高度なアルゴリズムと深い性格分析を使用しています。'
+        },
+        retake: {
+          question: 'テストを再受験できますか？',
+          answer: 'もちろんです！組分け帽子があなたの選択を考慮するように、いつでも何度でもテストを受けることができます。'
+        },
+        difference: {
+          question: 'このテストの特別な点は何ですか？',
+          answer: '私たちのテストは伝統的な組分け方法と現代の性格分析を組み合わせています。さらに、AI組分け帽子との対話も可能です！'
+        }
+      }
     },
     quiz: {
       question: '質問',

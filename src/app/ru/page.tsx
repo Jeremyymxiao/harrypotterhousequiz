@@ -3,9 +3,12 @@ import MagicCursor from '@/components/MagicCursor'
 import { ru } from '@/i18n/translations/ru'
 
 export const metadata = {
-  title: "Тест на факультет Хогвартса & Разговор с Распределяющей шляпой | Узнай свой факультет",
+  title: "Какой факультет Хогвартса твой? Пройди тест! ✨",
   description: "Пройдите тест на факультет Хогвартса или побеседуйте с ИИ Распределяющей шляпой, чтобы узнать свой истинный факультет. Испытайте магию персонализированного распределения!",
   keywords: "Тест на факультет Хогвартса, Разговор с Распределяющей шляпой, Факультеты Хогвартса, Гриффиндор, Слизерин, Хаффлпафф, Рейвенкло, Тест личности, Волшебный мир, ИИ Распределяющая шляпа, Магический тест",
+  alternates: {
+    canonical: 'https://harrypotterquiz.pro/ru'
+  },
   openGraph: {
     title: "Начни своё магическое путешествие - Тест на факультет Хогвартса & Разговор с Распределяющей шляпой",
     description: "Готовы узнать свой истинный факультет Хогвартса? Пройдите наш волшебный тест или проведите личную беседу с Распределяющей шляпой, чтобы найти своё истинное место!"
@@ -56,6 +59,53 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      {/* Additional Sections */}
+      <section className="relative z-10 w-full px-4 py-16 bg-black/40">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl font-magic-ru text-amber-400 text-center mb-12">{ru.home.features.title}</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-magic-ru text-amber-400 mb-4">{ru.home.features.advancedQuiz.title}</h3>
+              <p className="text-amber-200">{ru.home.features.advancedQuiz.description}</p>
+            </div>
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-magic-ru text-amber-400 mb-4">{ru.home.features.aiSortingHat.title}</h3>
+              <p className="text-amber-200">{ru.home.features.aiSortingHat.description}</p>
+            </div>
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-magic-ru text-amber-400 mb-4">{ru.home.features.detailedAnalysis.title}</h3>
+              <p className="text-amber-200">{ru.home.features.detailedAnalysis.description}</p>
+            </div>
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-magic-ru text-amber-400 mb-4">{ru.home.features.houseHistory.title}</h3>
+              <p className="text-amber-200">{ru.home.features.houseHistory.description}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative z-10 w-full px-4 py-16">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl font-magic-ru text-amber-400 text-center mb-12">{ru.home.faq.title}</h2>
+          
+          <div className="space-y-6">
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-magic-ru text-amber-400 mb-3">{ru.home.faq.accuracy.question}</h3>
+              <p className="text-amber-200">{ru.home.faq.accuracy.answer}</p>
+            </div>
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-magic-ru text-amber-400 mb-3">{ru.home.faq.retake.question}</h3>
+              <p className="text-amber-200">{ru.home.faq.retake.answer}</p>
+            </div>
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-magic-ru text-amber-400 mb-3">{ru.home.faq.difference.question}</h3>
+              <p className="text-amber-200">{ru.home.faq.difference.answer}</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 } 

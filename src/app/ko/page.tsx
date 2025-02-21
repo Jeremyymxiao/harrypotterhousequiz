@@ -3,9 +3,12 @@ import MagicCursor from '@/components/MagicCursor'
 import { ko } from '@/i18n/translations/ko'
 
 export const metadata = {
-  title: "해리포터 기숙사 테스트 & 분류 모자 대화 | 당신의 호그와트 기숙사를 발견하세요",
+  title: "당신의 호그와트 기숙사는? 지금 확인하세요! ✨",
   description: "해리포터 기숙사 테스트를 받거나 AI 분류 모자와 대화하여 당신의 진정한 호그와트 기숙사를 찾아보세요. 개인화된 분류의 마법을 경험하세요!",
   keywords: "해리포터 기숙사 테스트, 분류 모자 대화, 호그와트 기숙사, 그리핀도르, 슬리데린, 후플푸프, 레이븐클로, 성격 테스트, 마법 세계, AI 분류 모자, 마법 테스트",
+  alternates: {
+    canonical: 'https://harrypotterquiz.pro/ko'
+  },
   openGraph: {
     title: "마법의 여정을 시작하세요 - 해리포터 기숙사 테스트 & 분류 모자 대화",
     description: "당신의 진정한 호그와트 기숙사를 발견할 준비가 되셨나요? 마법 테스트를 받거나 분류 모자와 개인적인 대화를 통해 당신이 진정으로 속한 곳을 찾아보세요!"
@@ -56,6 +59,53 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      {/* Additional Sections */}
+      <section className="relative z-10 w-full px-4 py-16 bg-black/40">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl font-magic-ko text-amber-400 text-center mb-12">{ko.home.features.title}</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-magic-ko text-amber-400 mb-4">{ko.home.features.advancedQuiz.title}</h3>
+              <p className="text-amber-200">{ko.home.features.advancedQuiz.description}</p>
+            </div>
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-magic-ko text-amber-400 mb-4">{ko.home.features.aiSortingHat.title}</h3>
+              <p className="text-amber-200">{ko.home.features.aiSortingHat.description}</p>
+            </div>
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-magic-ko text-amber-400 mb-4">{ko.home.features.detailedAnalysis.title}</h3>
+              <p className="text-amber-200">{ko.home.features.detailedAnalysis.description}</p>
+            </div>
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-magic-ko text-amber-400 mb-4">{ko.home.features.houseHistory.title}</h3>
+              <p className="text-amber-200">{ko.home.features.houseHistory.description}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative z-10 w-full px-4 py-16">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl font-magic-ko text-amber-400 text-center mb-12">{ko.home.faq.title}</h2>
+          
+          <div className="space-y-6">
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-magic-ko text-amber-400 mb-3">{ko.home.faq.accuracy.question}</h3>
+              <p className="text-amber-200">{ko.home.faq.accuracy.answer}</p>
+            </div>
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-magic-ko text-amber-400 mb-3">{ko.home.faq.retake.question}</h3>
+              <p className="text-amber-200">{ko.home.faq.retake.answer}</p>
+            </div>
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-magic-ko text-amber-400 mb-3">{ko.home.faq.difference.question}</h3>
+              <p className="text-amber-200">{ko.home.faq.difference.answer}</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 } 
