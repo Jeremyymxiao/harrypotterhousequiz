@@ -162,3 +162,44 @@ The Bento.me link provides users with a way to connect with the site creator's p
    - Placed in the document head for earliest possible initialization
 
 This integration enables tracking of website visits, user behavior, and other analytics data through Google Analytics 4, providing valuable insights into site usage and performance.
+
+### Improved Google Analytics Implementation
+
+1. Created a dedicated GoogleAnalytics component:
+   - Created new file: src/components/GoogleAnalytics.tsx
+   - Implemented as a client component with 'use client' directive
+   - Added proper TypeScript type declarations for gtag
+   - Included debug logging to help troubleshoot tracking issues
+
+2. Enhanced tracking capabilities:
+   - Added route change tracking using Next.js navigation hooks
+   - Implemented automatic page_path parameter updates
+   - Added error handling and load event callbacks
+   - Enabled debug mode for easier troubleshooting
+
+3. Updated root layout:
+   - Removed inline Google Analytics scripts
+   - Added the GoogleAnalytics component to the body
+   - Maintained the same tracking ID (G-M4GXJKKP23)
+
+These improvements provide more robust analytics tracking, better debugging capabilities, and proper handling of client-side navigation events in the Next.js application.
+
+### Added Environment Variable Support for Google Analytics
+
+1. Enhanced GoogleAnalytics component:
+   - Refactored to use environment variables for the measurement ID
+   - Added fallback to default ID if environment variable is not set
+   - Updated all references to use the environment variable
+
+2. Added environment configuration:
+   - Created .env.local file for local development
+   - Added NEXT_PUBLIC_GA_MEASUREMENT_ID environment variable
+   - Set the current measurement ID (G-M4GXJKKP23) as the default value
+
+3. Benefits of this approach:
+   - Easier management of different tracking IDs across environments
+   - Better security by not hardcoding IDs in the codebase
+   - Simplified process for updating the ID in the future
+   - Follows Next.js best practices for environment configuration
+
+This implementation makes it easier to manage Google Analytics configuration across different environments (development, staging, production) and improves the overall code maintainability.

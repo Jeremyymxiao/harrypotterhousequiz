@@ -7,6 +7,7 @@ import { getCurrentLanguage } from '@/utils/language'
 import { headers } from 'next/headers'
 import { Analytics } from "@vercel/analytics/react"
 import Script from 'next/script'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 export async function generateMetadata({ params }: { params: any }) {
   const headersList = headers();
@@ -193,21 +194,9 @@ export default function RootLayout({
             })
           }}
         />
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-M4GXJKKP23"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-M4GXJKKP23');
-          `}
-        </Script>
       </head>
       <body className="flex flex-col min-h-screen">
+        <GoogleAnalytics />
         <LanguageNotification />
         <Header />
         <main className="flex-grow">
