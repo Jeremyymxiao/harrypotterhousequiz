@@ -60,6 +60,21 @@ const Footer = () => {
             >
               {t.privacyPolicy}
             </Link>
+            <span className="text-amber-200">•</span>
+            <a 
+              href="https://bento.me/jeremy-xiao"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-amber-400 hover:text-amber-300 transition-colors ${
+                language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
+                language === 'jp' ? 'font-magic-jp' :
+                language === 'ko' ? 'font-magic-ko' :
+                language === 'ru' ? 'font-magic-ru' :
+                'font-harry'
+              }`}
+            >
+              {t.bentoProfile}
+            </a>
           </div>
         </div>
       </div>
