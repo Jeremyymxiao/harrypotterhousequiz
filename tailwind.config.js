@@ -24,6 +24,7 @@ module.exports = {
           primary: '#FFD800',
           secondary: '#000000',
         },
+        parchment: '#f5e6d3',
       },
       fontFamily: {
         'magic-zh': ['MaShanZheng', 'sans-serif'],
@@ -41,7 +42,11 @@ module.exports = {
       },
       animation: {
         float: 'float 3s ease-in-out infinite',
-      }
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
     },
   },
   plugins: [],

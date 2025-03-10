@@ -1,12 +1,13 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { HOUSES, type HouseName } from '@/types/houses'
 import { getCurrentLanguage } from '@/utils/language'
 import { usePathname } from 'next/navigation'
 import { en } from '@/i18n/translations/en'
+import html2canvas from 'html2canvas'
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -14,21 +15,106 @@ import {
   TwitterIcon,
   WhatsappShareButton,
   WhatsappIcon,
+  RedditShareButton,
+  RedditIcon,
 } from 'react-share'
+import { RiTiktokFill } from 'react-icons/ri'
+
+// Social media button component
+const SocialButton = ({ icon, onClick, label }: { icon: React.ReactNode; onClick: () => void; label: string }) => (
+  <button
+    onClick={onClick}
+    className="hover:opacity-80 transition-opacity rounded-full bg-white p-2 flex items-center justify-center"
+    title={label}
+  >
+    {icon}
+  </button>
+)
+
+// 下载卡片组件
+const DownloadCard = ({ house, houseData, currentLang }: { 
+  house: HouseName, 
+  houseData: any, 
+  currentLang: string 
+}) => {
+  return (
+    <div className="w-[600px] h-[800px] relative bg-parchment p-8 rounded-xl shadow-2xl border-8 border-double" style={{ borderColor: houseData.colors.primary }}>
+      <div className="absolute inset-0 bg-[url('/images/parchment-texture.jpg')] opacity-20 rounded-lg" />
+      
+      <div className="relative z-10 h-full flex flex-col items-center justify-between">
+        <div className="text-center space-y-6">
+          <h1 className="text-4xl font-bold text-amber-800 mb-6 font-harry tracking-wider">
+            Certificate of House Sorting
+          </h1>
+
+          <div className="relative w-64 h-64 mx-auto mb-8">
+            <Image
+              src={`/images/houses/${house.toLowerCase()}-crest.png`}
+              alt={`${houseData.displayName[currentLang]} Crest`}
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+          
+          <h2 className="text-6xl font-bold font-harry tracking-wide mb-8" style={{ color: houseData.colors.primary }}>
+            {houseData.displayName[currentLang]}
+          </h2>
+          
+          <p className="text-3xl text-gray-700 font-harry tracking-wide px-8">
+            {houseData.description[currentLang]}
+          </p>
+        </div>
+
+        <div className="text-center mt-auto">
+          <div className="w-full h-[2px] bg-amber-800/30 mb-4" />
+          <p className="text-amber-800/70 font-harry text-lg">
+            By harrypotterhousequiz.pro
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default function ResultPage() {
   const [house, setHouse] = useState<HouseName | null>(null)
   const [shareUrl, setShareUrl] = useState('')
+  const [isDownloading, setIsDownloading] = useState(false)
+  const downloadCardRef = useRef<HTMLDivElement>(null)
   const pathname = usePathname()
   const currentLang = getCurrentLanguage(pathname)
-  const t = en // 因为这是英文页面，所以直接使用英文翻译
+  const t = en
 
   useEffect(() => {
     const result = localStorage.getItem('quizResult') as HouseName
     setHouse(result)
-    // Set the share URL when component mounts
     setShareUrl(window.location.origin)
   }, [])
+
+  const downloadResultCard = async () => {
+    if (!downloadCardRef.current) return
+    setIsDownloading(true)
+    try {
+      const canvas = await html2canvas(downloadCardRef.current, {
+        scale: 2,
+        backgroundColor: '#f5e6d3', // 羊皮纸颜色
+        logging: false
+      })
+      const image = canvas.toDataURL('image/png')
+      const link = document.createElement('a')
+      link.href = image
+      link.download = `hogwarts-house-${house?.toLowerCase()}.png`
+      link.click()
+    } catch (error) {
+      console.error('Error generating image:', error)
+    }
+    setIsDownloading(false)
+  }
+
+  const handleTiktokShare = () => {
+    window.open(`https://www.tiktok.com/share?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(`I've been sorted into ${houseData.displayName[currentLang]} at Hogwarts! Take the quiz to find out your house! 🧙‍♂️✨`)}`, '_blank')
+  }
 
   if (!house) {
     return (
@@ -62,7 +148,17 @@ export default function ResultPage() {
             />
           </div>
           
-          <h2 className="text-5xl font-bold font-harry tracking-wide" style={{ color: houseData.colors.primary }}>
+          <h2 className="text-5xl font-bold font-harry tracking-wide" style={{ 
+            color: houseData.colors.primary,
+            textShadow: `
+              2px 2px 0 ${houseData.colors.secondary},
+              -2px -2px 0 ${houseData.colors.secondary},
+              2px -2px 0 ${houseData.colors.secondary},
+              -2px 2px 0 ${houseData.colors.secondary},
+              0 0 10px rgba(255, 223, 0, 0.5)
+            `,
+            filter: 'brightness(1.2)'
+          }}>
             {houseData.displayName[currentLang]}
           </h2>
           
@@ -71,23 +167,33 @@ export default function ResultPage() {
           </p>
         </div>
 
-        <div className="pt-8 space-x-4">
+        <div className="pt-8 flex flex-col sm:flex-row justify-center items-center gap-4 sm:space-x-4">
           <Link
             href="/"
-            className="magic-button inline-block px-6 py-3 text-white bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-200"
+            className="magic-button w-full sm:w-auto inline-block px-6 py-3 text-amber-100 bg-gradient-to-br from-stone-800 to-stone-900 rounded-lg hover:from-stone-700 hover:to-stone-800 transition-all duration-200 shadow-lg hover:shadow-amber-900/20 border border-stone-700"
           >
             {t.common.returnHome}
           </Link>
           
           <Link
             href="/quiz"
-            className="magic-button inline-block px-6 py-3 text-white bg-amber-600 rounded-lg hover:bg-amber-500 transition-colors duration-200"
+            className="magic-button w-full sm:w-auto inline-block px-6 py-3 text-amber-100 bg-gradient-to-br from-amber-700 to-amber-900 rounded-lg hover:from-amber-600 hover:to-amber-800 transition-all duration-200 shadow-lg hover:shadow-amber-900/20 border border-amber-600"
           >
             {t.result.retake}
           </Link>
+
+          <button
+            onClick={downloadResultCard}
+            disabled={isDownloading}
+            className={`magic-button w-full sm:w-auto inline-block px-6 py-3 text-amber-100 bg-gradient-to-br from-yellow-700 to-yellow-900 rounded-lg hover:from-yellow-600 hover:to-yellow-800 transition-all duration-200 shadow-lg hover:shadow-amber-900/20 border border-yellow-700 ${
+              isDownloading ? 'opacity-50 cursor-not-allowed' : ''
+            }`}
+          >
+            {isDownloading ? 'Generating...' : 'Download Card'}
+          </button>
         </div>
 
-        <div className="mt-6 flex justify-center space-x-4">
+        <div className="mt-6 flex justify-center space-x-4 flex-wrap gap-y-4">
           <FacebookShareButton
             url={shareUrl}
             hashtag="#HogwartsHouse"
@@ -111,6 +217,29 @@ export default function ResultPage() {
           >
             <WhatsappIcon size={40} round />
           </WhatsappShareButton>
+
+          <RedditShareButton
+            url={shareUrl}
+            title={`I've been sorted into ${houseData.displayName[currentLang]} at Hogwarts! Take the quiz to find out your house! 🧙‍♂️✨`}
+            className="hover:opacity-80 transition-opacity"
+          >
+            <RedditIcon size={40} round />
+          </RedditShareButton>
+
+          <SocialButton
+            icon={<RiTiktokFill size={24} className="text-black" />}
+            onClick={handleTiktokShare}
+            label="Share on TikTok"
+          />
+        </div>
+
+        {/* 隐藏的下载卡片 */}
+        <div className="fixed left-[-9999px]" ref={downloadCardRef}>
+          <DownloadCard 
+            house={house} 
+            houseData={houseData}
+            currentLang={currentLang}
+          />
         </div>
       </div>
     </main>
