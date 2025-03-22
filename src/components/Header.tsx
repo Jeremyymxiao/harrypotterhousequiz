@@ -67,7 +67,7 @@ const Header = () => {
               {t.quizForKids}
             </Link>
             <Link 
-              href={language === 'en' ? '/ask-sorting-hat' : `/${language}/ask-sorting-hat`}
+              href={language === 'en' ? '/sorting-hat-quiz' : `/${language}/sorting-hat-quiz`}
               className={`text-amber-200 hover:text-amber-400 transition-colors text-xl ${
                 language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
                 language === 'jp' ? 'font-magic-jp' :
@@ -122,7 +122,7 @@ const Header = () => {
                 {t.quizForKids}
               </Link>
               <Link 
-                href={language === 'en' ? '/ask-sorting-hat' : `/${language}/ask-sorting-hat`}
+                href={language === 'en' ? '/sorting-hat-quiz' : `/${language}/sorting-hat-quiz`}
                 className={`text-amber-200 hover:text-amber-400 transition-colors text-xl text-center ${
                   language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
                   language === 'jp' ? 'font-magic-jp' :
