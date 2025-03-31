@@ -187,17 +187,17 @@ export default function ResultPage() {
           </p>
         </div>
 
-        <div className="pt-8 space-x-4">
+        <div className="pt-8 flex flex-col sm:flex-row justify-center items-center gap-4 sm:space-x-4">
           <Link
             href="/"
-            className="magic-button inline-block px-6 py-3 text-amber-100 bg-gradient-to-br from-stone-800 to-stone-900 rounded-lg hover:from-stone-700 hover:to-stone-800 transition-all duration-200 shadow-lg hover:shadow-amber-900/20 border border-stone-700"
+            className="magic-button w-full sm:w-auto px-6 py-3 text-amber-100 bg-gradient-to-br from-stone-800 to-stone-900 rounded-lg hover:from-stone-700 hover:to-stone-800 transition-all duration-200 shadow-lg hover:shadow-amber-900/20 border border-stone-700"
           >
             {t.common.returnHome}
           </Link>
           
           <Link
             href="/quiz"
-            className="magic-button inline-block px-6 py-3 text-amber-100 bg-gradient-to-br from-amber-700 to-amber-900 rounded-lg hover:from-amber-600 hover:to-amber-800 transition-all duration-200 shadow-lg hover:shadow-amber-900/20 border border-amber-600"
+            className="magic-button w-full sm:w-auto px-6 py-3 text-amber-100 bg-gradient-to-br from-amber-700 to-amber-900 rounded-lg hover:from-amber-600 hover:to-amber-800 transition-all duration-200 shadow-lg hover:shadow-amber-900/20 border border-amber-600"
           >
             {t.result.retake}
           </Link>
@@ -205,7 +205,7 @@ export default function ResultPage() {
           <button
             onClick={downloadResultCard}
             disabled={isDownloading}
-            className={`magic-button inline-block px-6 py-3 text-amber-100 bg-gradient-to-br from-yellow-700 to-yellow-900 rounded-lg hover:from-yellow-600 hover:to-yellow-800 transition-all duration-200 shadow-lg hover:shadow-amber-900/20 border border-yellow-700 ${
+            className={`magic-button w-full sm:w-auto px-6 py-3 text-amber-100 bg-gradient-to-br from-yellow-700 to-yellow-900 rounded-lg hover:from-yellow-600 hover:to-yellow-800 transition-all duration-200 shadow-lg hover:shadow-amber-900/20 border border-yellow-700 ${
               isDownloading ? 'opacity-50 cursor-not-allowed' : ''
             }`}
           >
