@@ -50,6 +50,18 @@
     <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/sorting-hat-quiz"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/sorting-hat-quiz"/>
   </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/hogwarts-enrollment-qa</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/hogwarts-enrollment-qa"/>
+  </url>
 
   <!-- Chinese (Simplified) pages -->
   <url>

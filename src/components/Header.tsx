@@ -78,6 +78,18 @@ const Header = () => {
             >
               {t.askSortingHat}
             </Link>
+            <Link 
+              href={language === 'en' ? '/hogwarts-enrollment-qa' : `/${language}/hogwarts-enrollment-qa`}
+              className={`text-amber-200 hover:text-amber-400 transition-colors text-xl ${
+                language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
+                language === 'jp' ? 'font-magic-jp' :
+                language === 'ko' ? 'font-magic-ko' :
+                language === 'ru' ? 'font-magic-ru' :
+                'font-harry'
+              }`}
+            >
+              {t.hogwartsEnrollment}
+            </Link>
             <LanguageSwitcher />
           </nav>
 
@@ -133,6 +145,19 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t.askSortingHat}
+              </Link>
+              <Link 
+                href={language === 'en' ? '/hogwarts-enrollment-qa' : `/${language}/hogwarts-enrollment-qa`}
+                className={`text-amber-200 hover:text-amber-400 transition-colors text-xl text-center ${
+                  language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
+                  language === 'jp' ? 'font-magic-jp' :
+                  language === 'ko' ? 'font-magic-ko' :
+                  language === 'ru' ? 'font-magic-ru' :
+                  'font-harry'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t.hogwartsEnrollment}
               </Link>
               <div className="flex justify-center">
                 <LanguageSwitcher />
