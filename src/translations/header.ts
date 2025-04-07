@@ -5,6 +5,7 @@ export const headerTranslations = {
     quizForKids: 'Quiz for Kids',
     askSortingHat: 'Ask Sorting Hat',
     hogwartsEnrollment: 'Hogwarts Enrollment Q&A',
+    patronusQuiz: 'Patronus Test',
   },
   jp: {
     title: 'ハリーポッター 寮分けクイズ',
@@ -12,6 +13,7 @@ export const headerTranslations = {
     quizForKids: '子供向けクイズ',
     askSortingHat: '組分け帽子に質問',
     hogwartsEnrollment: 'ホグワーツ入学Q&A',
+    patronusQuiz: '守護霊テスト',
   },
   ko: {
     title: '해리포터 기숙사 배정 퀴즈',
@@ -19,6 +21,7 @@ export const headerTranslations = {
     quizForKids: '어린이용 퀴즈',
     askSortingHat: '분류 모자에게 물어보기',
     hogwartsEnrollment: '호그와트 입학 Q&A',
+    patronusQuiz: '패트로누스 테스트',
   },
   pt: {
     title: 'Teste das Casas de Harry Potter',
@@ -26,6 +29,7 @@ export const headerTranslations = {
     quizForKids: 'Teste para Crianças',
     askSortingHat: 'Pergunte ao Chapéu Seletor',
     hogwartsEnrollment: 'Perguntas e Respostas sobre Inscrição em Hogwarts',
+    patronusQuiz: 'Teste de Patrono',
   },
   ru: {
     title: 'Тест распределения по факультетам',
@@ -33,6 +37,7 @@ export const headerTranslations = {
     quizForKids: 'Тест для детей',
     askSortingHat: 'Спросить Распределяющую шляпу',
     hogwartsEnrollment: 'Вопросы и ответы о поступлении в Хогвартс',
+    patronusQuiz: 'Тест Патронуса',
   },
   zh: {
     title: '哈利波特学院分院测试',
@@ -40,6 +45,7 @@ export const headerTranslations = {
     quizForKids: '儿童版测试',
     askSortingHat: '问问分院帽',
     hogwartsEnrollment: '霍格沃茨入学问答',
+    patronusQuiz: '守护神测试',
   },
   zhHant: {
     title: '哈利波特學院分院測試',
@@ -47,5 +53,6 @@ export const headerTranslations = {
     quizForKids: '兒童版測試',
     askSortingHat: '問問分類帽',
     hogwartsEnrollment: '霍格華茲入學問答',
+    patronusQuiz: '守護神測試',
   },
 } 

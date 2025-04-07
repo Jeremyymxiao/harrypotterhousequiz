@@ -90,6 +90,18 @@ const Header = () => {
             >
               {t.hogwartsEnrollment}
             </Link>
+            <Link 
+              href={language === 'en' ? '/patronus-quiz' : `/${language}/patronus-quiz`}
+              className={`text-amber-200 hover:text-amber-400 transition-colors text-xl ${
+                language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
+                language === 'jp' ? 'font-magic-jp' :
+                language === 'ko' ? 'font-magic-ko' :
+                language === 'ru' ? 'font-magic-ru' :
+                'font-harry'
+              }`}
+            >
+              {t.patronusQuiz}
+            </Link>
             <LanguageSwitcher />
           </nav>
 
@@ -158,6 +170,19 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t.hogwartsEnrollment}
+              </Link>
+              <Link 
+                href={language === 'en' ? '/patronus-quiz' : `/${language}/patronus-quiz`}
+                className={`text-amber-200 hover:text-amber-400 transition-colors text-xl text-center ${
+                  language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
+                  language === 'jp' ? 'font-magic-jp' :
+                  language === 'ko' ? 'font-magic-ko' :
+                  language === 'ru' ? 'font-magic-ru' :
+                  'font-harry'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t.patronusQuiz}
               </Link>
               <div className="flex justify-center">
                 <LanguageSwitcher />
