@@ -6,7 +6,7 @@ export const metadata = {
   description: "ホグワーツ魔法魔術学校の入学プロセス、入学基準、よくある質問についてご紹介します。ホグワーツの入学許可書の受け取り方法、学費、その他魔法界に関する重要な情報をご覧ください。",
   keywords: "ホグワーツ入学, ホグワーツ入学許可, ホグワーツ入学Q&A, ホグワーツ通知書, ホグワーツ学費, ホグワーツ制服, 杖の購入, ダイアゴン横丁",
   alternates: {
-    canonical: 'https://harrypotterquiz.pro/jp/hogwarts-enrollment-qa'
+    canonical: 'https://harrypotterhousequiz.pro/jp/hogwarts-enrollment-qa'
   },
   openGraph: {
     title: "ホグワーツ入学Q&A | 魔法学校入学ガイド",

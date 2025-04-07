@@ -6,7 +6,7 @@ export const metadata = {
   description: "호그와트 마법 학교의 입학 과정, 입학 기준 및 자주 묻는 질문에 대해 알아보세요. 호그와트 입학 허가서를 받는 방법, 학비, 그리고 마법 세계에 관한 기타 중요한 정보를 탐색하세요.",
   keywords: "호그와트 입학, 호그와트 합격, 호그와트 입학 Q&A, 호그와트 입학 허가서, 호그와트 학비, 호그와트 교복, 지팡이 구매, 다이애건 앨리",
   alternates: {
-    canonical: 'https://harrypotterquiz.pro/ko/hogwarts-enrollment-qa'
+    canonical: 'https://harrypotterhousequiz.pro/ko/hogwarts-enrollment-qa'
   },
   openGraph: {
     title: "호그와트 입학 Q&A | 마법 학교 입학 가이드",

@@ -8,7 +8,7 @@ export const metadata = {
   description: "Faça nosso Teste da Casa de Hogwarts oficial ou converse com o Chapéu Seletor AI para descobrir sua verdadeira casa em Hogwarts. Nosso Teste da Casa de Hogwarts usa análise de personalidade precisa para determinar se você pertence à Grifinória, Sonserina, Lufa-Lufa ou Corvinal!",
   keywords: "Teste da Casa de Hogwarts, Seleção de Casas de Hogwarts, Teste do Chapéu Seletor, Casas de Hogwarts, Grifinória, Sonserina, Lufa-Lufa, Corvinal, Teste de Personalidade, Mundo Mágico, Chapéu Seletor AI, Teste Mágico",
   alternates: {
-    canonical: 'https://harrypotterquiz.pro/pt'
+    canonical: 'https://harrypotterhousequiz.pro/pt'
   },
   openGraph: {
     title: "Teste da Casa de Hogwarts - Comece sua Jornada Mágica | Descubra sua Casa em Hogwarts",

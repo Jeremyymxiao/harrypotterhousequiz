@@ -8,7 +8,7 @@ export const metadata = {
   description: 'Tenha uma conversa mágica com nosso Chapéu Seletor de IA! Faça perguntas sobre as casas de Hogwarts e descubra seu verdadeiro lugar no mundo bruxo.',
   keywords: 'Teste do Chapéu Seletor, Chapéu Seletor AI, Conversar com Chapéu Seletor, Teste da Casa de Harry Potter',
   alternates: {
-    canonical: 'https://harrypotterquiz.pro/pt/sorting-hat-quiz'
+    canonical: 'https://harrypotterhousequiz.pro/pt/sorting-hat-quiz'
   },
   openGraph: {
     title: 'Converse com o Chapéu Seletor Mágico - Seleção Interativa para Casas de Hogwarts',

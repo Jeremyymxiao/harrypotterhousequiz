@@ -8,7 +8,7 @@ export const metadata = {
   description: "参加官方哈利波特分院测试，或与AI分院帽聊天，发现你真正的霍格沃茨学院。我们的哈利波特分院测试基于深度性格分析，帮助你找到格兰芬多、斯莱特林、赫奇帕奇或拉文克劳中最适合你的学院！",
   keywords: "哈利波特分院测试, 哈利波特学院测试, 霍格沃茨分院测试, 分院帽测试, 霍格沃茨学院, 格兰芬多, 斯莱特林, 赫奇帕奇, 拉文克劳, 魔法测试, AI分院帽, 魔法世界",
   alternates: {
-    canonical: 'https://harrypotterquiz.pro/zh'
+    canonical: 'https://harrypotterhousequiz.pro/zh'
   },
   openGraph: {
     title: "哈利波特分院测试 - 开启你的魔法之旅 | 发现你的霍格沃茨学院",

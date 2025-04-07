@@ -7,7 +7,7 @@ export const metadata = {
   description: "Take our official Harry Potter House Quiz or chat with the AI Sorting Hat to discover your true Hogwarts house. Our Harry Potter House Quiz uses deep personality analysis to match you with Gryffindor, Slytherin, Hufflepuff, or Ravenclaw!",
   keywords: "Harry Potter House Quiz, Hogwarts House Test, Sorting Hat Quiz, Hogwarts Houses, Gryffindor, Slytherin, Hufflepuff, Ravenclaw, Personality Test, Wizarding World, AI Sorting Hat, Magic Quiz",
   alternates: {
-    canonical: 'https://harrypotterquiz.pro'
+    canonical: 'https://harrypotterhousequiz.pro'
   },
   openGraph: {
     title: "Harry Potter House Quiz - Start Your Magical Journey | Find Your Hogwarts House",

@@ -6,7 +6,7 @@ export const metadata = {
   description: "Learn about Hogwarts School of Witchcraft and Wizardry's enrollment process, admission criteria, and frequently asked questions. Discover how to receive your Hogwarts acceptance letter, school fees, and other important information about the wizarding world.",
   keywords: "Hogwarts enrollment, Hogwarts admission, Hogwarts acceptance letter, Hogwarts FAQ, Hogwarts school fees, Hogwarts uniform, wand purchasing, Diagon Alley",
   alternates: {
-    canonical: 'https://harrypotterquiz.pro/hogwarts-enrollment-qa'
+    canonical: 'https://harrypotterhousequiz.pro/hogwarts-enrollment-qa'
   },
   openGraph: {
     title: "Hogwarts Enrollment Q&A | Magical School Admission Guide",

@@ -6,7 +6,7 @@ export const metadata = {
   description: "了解霍格華茲魔法與巫術學院的入學流程、錄取標準和常見問題。探索如何獲得入學通知書、學費信息以及其他關於魔法世界的重要細節。",
   keywords: "霍格華茲入學, 霍格華茲錄取, 霍格華茲信件, 霍格華茲問題, 霍格華茲學費, 霍格華茲校服, 購買魔杖, 斜角巷",
   alternates: {
-    canonical: 'https://harrypotterquiz.pro/zhHant/hogwarts-enrollment-qa'
+    canonical: 'https://harrypotterhousequiz.pro/zhHant/hogwarts-enrollment-qa'
   },
   openGraph: {
     title: "霍格華茲入學問答 | 魔法學校入學指南",

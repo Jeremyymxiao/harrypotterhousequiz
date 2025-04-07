@@ -8,7 +8,7 @@ export const metadata = {
   description: "參加我們的官方哈利波特分院測試或與AI分院帽聊天，發現你真正的霍格華茲學院。我們的哈利波特分院測試使用精確的性格分析來確定你是屬於葛萊芬多、史萊哲林、赫夫帕夫還是雷文克勞！",
   keywords: "哈利波特分院測試, 霍格華茲學院測試, 分院帽測試, 霍格華茲學院, 葛萊芬多, 史萊哲林, 赫夫帕夫, 雷文克勞, 性格測試, 魔法世界, AI分院帽, 魔法測試",
   alternates: {
-    canonical: 'https://harrypotterquiz.pro/zhHant'
+    canonical: 'https://harrypotterhousequiz.pro/zhHant'
   },
   openGraph: {
     title: "哈利波特分院測試 - 開啟你的魔法之旅 | 發現你的霍格華茲學院",

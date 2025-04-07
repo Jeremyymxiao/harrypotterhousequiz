@@ -6,7 +6,7 @@ export const metadata = {
   description: "Aprenda sobre o processo de admissão, critérios de seleção e perguntas frequentes da Escola de Magia e Bruxaria de Hogwarts. Descubra como receber sua carta de aceitação, taxas escolares e outras informações importantes sobre o mundo bruxo.",
   keywords: "inscrição em Hogwarts, admissão em Hogwarts, carta de aceitação de Hogwarts, perguntas sobre Hogwarts, taxas de Hogwarts, uniforme de Hogwarts, compra de varinha, Beco Diagonal",
   alternates: {
-    canonical: 'https://harrypotterquiz.pro/pt/hogwarts-enrollment-qa'
+    canonical: 'https://harrypotterhousequiz.pro/pt/hogwarts-enrollment-qa'
   },
   openGraph: {
     title: "Perguntas e Respostas sobre Inscrição em Hogwarts | Guia de Admissão na Escola de Magia",

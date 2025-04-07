@@ -7,7 +7,7 @@ export const metadata = {
   description: "了解霍格沃茨魔法学校的入学流程、录取标准和常见问题解答。探索如何收到霍格沃茨录取通知书，学校收费标准，以及关于魔法世界的其他重要信息。",
   keywords: "霍格沃茨入学, 霍格沃茨录取, 霍格沃茨入学问答, 霍格沃茨通知书, 霍格沃茨学费, 霍格沃茨校服, 魔杖购买, 对角巷",
   alternates: {
-    canonical: 'https://harrypotterquiz.pro/zh/hogwarts-enrollment-qa'
+    canonical: 'https://harrypotterhousequiz.pro/zh/hogwarts-enrollment-qa'
   },
   openGraph: {
     title: "霍格沃茨入学问答 | 魔法学校招生指南",

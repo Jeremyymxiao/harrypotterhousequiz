@@ -8,7 +8,7 @@ export const metadata = {
   description: '우리의 AI 분류 모자와 마법 같은 대화를 나누세요! 호그와트 기숙사에 대해 질문하고, 대화를 통해 분류되며, 마법 세계에서 당신의 진정한 위치를 발견하세요.',
   keywords: '분류 모자 테스트, AI 분류 모자, 분류 모자와 대화하기, 해리포터 기숙사 테스트',
   alternates: {
-    canonical: 'https://harrypotterquiz.pro/ko/sorting-hat-quiz'
+    canonical: 'https://harrypotterhousequiz.pro/ko/sorting-hat-quiz'
   },
   openGraph: {
     title: '마법의 분류 모자와 대화하기 - 인터랙티브 호그와트 기숙사 분류',

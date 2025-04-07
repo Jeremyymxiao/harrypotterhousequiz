@@ -8,7 +8,7 @@ export const metadata = {
   description: '與我們的AI分院帽進行魔法對話！詢問關於霍格華茲學院的問題，通過對話進行分院，發現你在魔法世界中的真正位置。',
   keywords: '分院帽測試, AI分院帽, 與分院帽對話, 哈利波特學院測試, 霍格華茲學院, 魔法分院帽, 互動分院, 魔法聊天',
   alternates: {
-    canonical: 'https://harrypotterquiz.pro/zhHant/sorting-hat-quiz'
+    canonical: 'https://harrypotterhousequiz.pro/zhHant/sorting-hat-quiz'
   },
   openGraph: {
     title: '與魔法分院帽對話 - 互動霍格華茲學院分類',

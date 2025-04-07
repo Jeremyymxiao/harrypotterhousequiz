@@ -8,7 +8,7 @@ export const metadata = {
   description: "저희의 공식 해리포터 기숙사 테스트를 통해 또는 AI 분류 모자와 대화하여 당신의 진정한 호그와트 기숙사를 찾아보세요. 이 해리포터 기숙사 테스트는 정밀한 성격 분석을 통해 그리핀도르, 슬리데린, 후플푸프, 레이븐클로 중 당신에게 가장 잘 맞는 기숙사를 알려드립니다!",
   keywords: "해리포터 기숙사 테스트, 호그와트 기숙사 분류, 분류 모자 테스트, 호그와트 기숙사, 그리핀도르, 슬리데린, 후플푸프, 레이븐클로, 성격 테스트, 마법 세계, AI 분류 모자, 마법 테스트",
   alternates: {
-    canonical: 'https://harrypotterquiz.pro/ko'
+    canonical: 'https://harrypotterhousequiz.pro/ko'
   },
   openGraph: {
     title: "해리포터 기숙사 테스트 - 마법의 여정을 시작하세요 | 당신의 호그와트 기숙사 발견",

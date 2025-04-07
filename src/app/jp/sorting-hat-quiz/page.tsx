@@ -8,7 +8,7 @@ export const metadata = {
   description: '私たちのAI組分け帽子と魔法の会話をしましょう！ホグワーツの寮について質問したり、対話を通じて組分けされたり、魔法の世界での本当の場所を発見したりしましょう。',
   keywords: '組分け帽子テスト, AI組分け帽子, 組分け帽子との会話, ハリーポッター寮テスト, ホグワーツの寮, 魔法の組分け帽子, インタラクティブな組分け, 魔法のチャット',
   alternates: {
-    canonical: 'https://harrypotterquiz.pro/jp/sorting-hat-quiz'
+    canonical: 'https://harrypotterhousequiz.pro/jp/sorting-hat-quiz'
   },
   openGraph: {
     title: '魔法の組分け帽子との会話 - インタラクティブなホグワーツ寮の組分け',

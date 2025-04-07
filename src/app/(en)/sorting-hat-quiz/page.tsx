@@ -7,7 +7,7 @@ export const metadata = {
   description: 'Have a magical conversation with our AI Sorting Hat! Ask questions about Hogwarts houses, get sorted through dialogue, and discover your true place in the wizarding world.',
   keywords: 'Sorting Hat Quiz, AI Sorting Hat, Talk to Sorting Hat, Harry Potter House Quiz, Hogwarts Houses, Magic Sorting Hat, Interactive Sorting, Magical Chat',
   alternates: {
-    canonical: 'https://harrypotterquiz.pro/sorting-hat-quiz'
+    canonical: 'https://harrypotterhousequiz.pro/sorting-hat-quiz'
   },
   openGraph: {
     title: 'Talk to the Magical Sorting Hat - Interactive Hogwarts House Sorting',

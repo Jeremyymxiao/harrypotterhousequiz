@@ -8,7 +8,7 @@ export const metadata = {
   description: "私たちの公式ハリーポッター寮分けテストを受けるか、AI組分け帽と会話して、あなたの本当のホグワーツ寮を見つけましょう。当ハリーポッター寮分けテストは精密な性格分析により、グリフィンドール、スリザリン、ハッフルパフ、レイブンクローのうち、あなたに最も合った寮を診断します！",
   keywords: "ハリーポッター寮分けテスト, ホグワーツ寮診断, 組分け帽テスト, ホグワーツの寮, グリフィンドール, スリザリン, ハッフルパフ, レイブンクロー, 性格診断, 魔法界, AI組分け帽, 魔法テスト",
   alternates: {
-    canonical: 'https://harrypotterquiz.pro/jp'
+    canonical: 'https://harrypotterhousequiz.pro/jp'
   },
   openGraph: {
     title: "ハリーポッター寮分けテスト - 魔法の旅を始めよう | あなたのホグワーツ寮を発見",
