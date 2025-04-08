@@ -7,6 +7,7 @@ import { getCurrentLanguage } from '@/utils/language'
 import { headers } from 'next/headers'
 import { Analytics } from "@vercel/analytics/react"
 import Script from 'next/script'
+import { generateHreflangLinks, getLanguageTag } from '@/utils/hreflang'
 
 export async function generateMetadata({ params }: { params: any }) {
   const headersList = headers();
@@ -88,6 +89,33 @@ export async function generateMetadata({ params }: { params: any }) {
         return ['Harry Potter, Hogwarts House, Sorting Hat, Harry Potter quiz, magical journey, house sorting quiz, discover Hogwarts house, wizarding world'];
     }
   })();
+  
+  // Generate hreflang links for the current page
+  const hreflangLinks = generateHreflangLinks(pathname, currentLang);
+  
+  // Create proper alternates object with correct hreflang tags
+  const alternates: { [key: string]: string } = {};
+  
+  // Add canonical URL
+  const canonicalUrl = hreflangLinks.find(link => 
+    link.hrefLang === getLanguageTag(currentLang))?.href || '';
+  
+  if (canonicalUrl) {
+    alternates.canonical = canonicalUrl;
+  }
+  
+  // Add all language alternates using standardized language tags
+  hreflangLinks.forEach(link => {
+    if (link.hrefLang !== 'x-default') {
+      alternates[link.hrefLang] = link.href;
+    }
+  });
+  
+  // Add x-default
+  const xDefaultUrl = hreflangLinks.find(link => link.hrefLang === 'x-default')?.href;
+  if (xDefaultUrl) {
+    alternates['x-default'] = xDefaultUrl;
+  }
 
   return {
     title: {
@@ -103,6 +131,7 @@ export async function generateMetadata({ params }: { params: any }) {
       index: true,
       follow: true,
     },
+    alternates,
     openGraph: {
       type: 'website',
       title,
@@ -165,7 +194,7 @@ export default function RootLayout({
   })();
 
   return (
-    <html lang={currentLang}>
+    <html lang={getLanguageTag(currentLang)}>
       <head>
         <script
           type="application/ld+json"

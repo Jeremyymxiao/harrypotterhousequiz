@@ -1,3 +1,20 @@
 User-agent: *
 Allow: /
+Allow: /zh/
+Allow: /zhHant/
+Allow: /ko/
+Allow: /ru/
+Allow: /jp/
+Allow: /pt/
+
+# Allow Google to crawl all language versions
+User-agent: Googlebot
+Allow: /
+Allow: /zh/
+Allow: /zhHant/
+Allow: /ko/
+Allow: /ru/
+Allow: /jp/
+Allow: /pt/
+
 Sitemap: https://harrypotterhousequiz.pro/sitemap.xml 

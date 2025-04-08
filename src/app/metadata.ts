@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { getLanguageTag } from '@/utils/hreflang'
 
 export const patronusQuizMetadata: Record<string, Metadata> = {
   en: {
