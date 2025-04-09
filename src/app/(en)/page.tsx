@@ -3,15 +3,15 @@ import MagicCursor from '@/components/MagicCursor'
 import Image from 'next/image'
 
 export const metadata = {
-  title: "Harry Potter House Quiz | Which Hogwarts House Are You? | Official Sorting",
-  description: "Take our official Harry Potter House Quiz or chat with the AI Sorting Hat to discover your true Hogwarts house. Our Harry Potter House Quiz uses deep personality analysis to match you with Gryffindor, Slytherin, Hufflepuff, or Ravenclaw!",
-  keywords: "Harry Potter House Quiz, Hogwarts House Test, Sorting Hat Quiz, Hogwarts Houses, Gryffindor, Slytherin, Hufflepuff, Ravenclaw, Personality Test, Wizarding World, AI Sorting Hat, Magic Quiz",
+  title: "Find Your Hogwarts House - Take the Free Quiz Now!",
+  description: "The ultimate Harry Potter House Quiz awaits! Discover your magical destiny as our enchanted Sorting Hat reveals your true Hogwarts house!",
+  keywords: "Harry Potter House Quiz, Free Hogwarts House Quiz, Sorting Hat Test, Hogwarts Houses, Gryffindor, Slytherin, Hufflepuff, Ravenclaw, Find Your Hogwarts House",
   alternates: {
     canonical: 'https://harrypotterhousequiz.pro'
   },
   openGraph: {
-    title: "Harry Potter House Quiz - Start Your Magical Journey | Find Your Hogwarts House",
-    description: "Ready to discover your true Hogwarts house through our authoritative Harry Potter House Quiz? Take our magical test or have an interactive conversation with the Sorting Hat to find where you truly belong!"
+    title: "Find Your Hogwarts House - Take the Free Quiz Now!",
+    description: "The ultimate Harry Potter House Quiz awaits! Discover your magical destiny as our enchanted Sorting Hat reveals if you belong in brave Gryffindor, cunning Slytherin, loyal Hufflepuff, or wise Ravenclaw!"
   }
 }
 

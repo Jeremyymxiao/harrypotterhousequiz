@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: any }) {
       case 'pt':
         return 'Teste da Casa de Hogwarts | Descubra sua Casa em Hogwarts';
       default:
-        return 'Harry Potter House Quiz | Discover Your Hogwarts House';
+        return 'Find Your Hogwarts House - Take the Free Quiz Now!';
     }
   })();
   
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: { params: any }) {
       case 'pt':
         return 'Faça nosso teste mágico do Chapéu Seletor e descubra sua verdadeira casa em Hogwarts. Seja você um corajoso Grifinória, um sábio Corvinal, um leal Lufa-Lufa ou um ambicioso Sonserina, encontre seu verdadeiro lugar!';
       default:
-        return 'Take our magical Harry Potter Sorting Hat Quiz to discover your true Hogwarts house. Whether you\'re a brave Gryffindor, wise Ravenclaw, loyal Hufflepuff, or ambitious Slytherin, find out where you truly belong!';
+        return 'The ultimate Harry Potter House Quiz awaits! Discover your magical destiny as our enchanted Sorting Hat reveals if you belong in brave Gryffindor, cunning Slytherin, loyal Hufflepuff, or wise Ravenclaw!';
     }
   })();
 
@@ -86,7 +86,7 @@ export async function generateMetadata({ params }: { params: any }) {
       case 'pt':
         return ['Harry Potter, Casas de Hogwarts, Chapéu Seletor, Teste mágico, Grifinória, Corvinal, Lufa-Lufa, Sonserina'];
       default:
-        return ['Harry Potter, Hogwarts House, Sorting Hat, Harry Potter quiz, magical journey, house sorting quiz, discover Hogwarts house, wizarding world'];
+        return ['Harry Potter House Quiz, Free Hogwarts House Quiz, Sorting Hat Test, Hogwarts Houses, Gryffindor, Slytherin, Hufflepuff, Ravenclaw, Find Your Hogwarts House'];
     }
   })();
   
@@ -118,10 +118,7 @@ export async function generateMetadata({ params }: { params: any }) {
   }
 
   return {
-    title: {
-      default: title,
-      template: `%s | ${siteName}`
-    },
+    title: title,
     description,
     keywords,
     authors: [{ name: 'Hogwarts Quiz Team' }],

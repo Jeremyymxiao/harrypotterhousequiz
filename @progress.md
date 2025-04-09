@@ -144,3 +144,23 @@ The Hogwarts Enrollment Q&A page includes:
 
 ### 总结
 通过移除守护神结果页面的下载结果卡片功能，我们简化了页面的代码结构，并去除了不必要的库依赖(html2canvas)。这一变更不影响页面的核心功能，用户仍然可以查看自己的守护神结果并通过社交媒体进行分享。移除此功能后，页面加载速度可能会有所提升，并且减少了可能出现的相关bug。所有语言版本的页面都进行了相同的修改，确保了一致的用户体验。
+
+## 2024-07-21 更新网站SEO元数据 - 优化标题和描述
+
+### 已完成
+- 更新了网站英文版的标题和描述:
+  - 标题: 从 "Harry Potter House Quiz | Discover Your Hogwarts House" 更改为 "Find Your Hogwarts House - Take the Free Quiz Now!"
+  - 描述: 更新为 "The ultimate Harry Potter House Quiz awaits! Discover your magical destiny as our enchanted Sorting Hat reveals if you belong in brave Gryffindor, cunning Slytherin, loyal Hufflepuff, or wise Ravenclaw!"
+- 更新了网站英文版的关键词以匹配新的标题和描述:
+  - 新关键词包含: "Harry Potter House Quiz, Free Hogwarts House Quiz, Sorting Hat Test, Hogwarts Houses, Gryffindor, Slytherin, Hufflepuff, Ravenclaw, Find Your Hogwarts House"
+- 更新了以下文件:
+  - `src/app/layout.tsx` - 更新了全站默认的标题和描述
+  - `src/app/(en)/page.tsx` - 更新了英文主页的标题、描述和OpenGraph元数据
+  - `src/i18n/translations/en.ts` - 更新了翻译文件中的标题
+  - `src/translations/header.ts` - 更新了页眉组件中的标题
+- 移除了标题模板格式:
+  - 在`src/app/layout.tsx`中将title配置从对象形式(包含default和template)改为简单的字符串
+  - 这样可以防止页面标题后自动附加网站名称，使标题更加简洁
+
+### 总结
+通过更新网站的标题和描述，我们提高了网站在搜索引擎中的吸引力和点击率。新的标题更简洁明了，突出了"免费"测试的特点，使用了行动性语言("Take the Free Quiz Now!")来鼓励用户点击。新的描述包含更多关键词，同时保持了吸引力和信息量。关键词也进行了相应更新，更好地匹配新的标题和描述，有助于提高网站在相关搜索中的排名。这些更改仅影响英文版网站，其他语言版本保持不变。为确保网站内部一致性，我们同时更新了翻译文件和头部组件中的标题，使整个用户体验保持连贯。移除标题模板格式则确保了页面标题更加简洁，不会自动附加网站名称，这样在搜索引擎结果页面中更能吸引用户点击。
