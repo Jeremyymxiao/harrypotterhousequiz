@@ -95,4 +95,29 @@
 
 - 更改将在下次部署后生效
 - Google 可能需要一些时间来抓取和索引更新后的页面
-- 可以通过 Google Search Console 主动提交网站地图，加速索引过程 
+- 可以通过 Google Search Console 主动提交网站地图，加速索引过程
+
+## 2024-07-22 修复多语言SEO问题
+
+### 已完成
+- 修复了多语言页面的SEO问题，使Google能够正确索引其他语言版本的页面
+- 解决了主要问题：非英语页面的`<html>`标签错误使用了`lang="en"`属性，缺少必要的`hreflang`链接标签
+- 通过直接在布局文件中手动添加`hreflang`链接，确保它们出现在HTML头部
+- 确保每个语言页面都有正确的`<html lang="xx">`属性设置：
+  - 英文: `<html lang="en">`
+  - 简体中文: `<html lang="zh-Hans">`
+  - 繁体中文: `<html lang="zh-Hant">`
+  - 日语: `<html lang="ja">`
+  - 韩语: `<html lang="ko">`
+  - 俄语: `<html lang="ru">`
+  - 葡萄牙语: `<html lang="pt">`
+- 添加显式的canonical链接，增强SEO优化
+
+### 修复的错误
+- 修复了Next.js生成的页面中缺少hreflang标签的问题
+- 解决了语言标签与URL路径不一致的问题（例如使用`/jp/`路径但有`<html lang="en">`）
+
+### 下一步
+- 部署更新后，需要在Google Search Console重新提交sitemap
+- 监控其他语言页面的索引状态，确认Google是否开始正确索引它们
+- 可能需要使用Search Console的URL检查工具验证各语言版本页面是否正确实现了hreflang标签 

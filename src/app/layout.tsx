@@ -190,9 +190,29 @@ export default function RootLayout({
     }
   })();
 
+  // Generate hreflang links for the current page to use in head
+  const hreflangLinks = generateHreflangLinks(pathname, currentLang);
+
   return (
     <html lang={getLanguageTag(currentLang)}>
       <head>
+        {/* Manually add hreflang links to ensure they appear in the HTML */}
+        {hreflangLinks.map((link) => (
+          <link 
+            key={link.hrefLang}
+            rel="alternate" 
+            hrefLang={link.hrefLang} 
+            href={link.href}
+          />
+        ))}
+
+        {/* Add canonical link explicitly */}
+        <link 
+          rel="canonical" 
+          href={hreflangLinks.find(link => 
+            link.hrefLang === getLanguageTag(currentLang))?.href || ''}
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
