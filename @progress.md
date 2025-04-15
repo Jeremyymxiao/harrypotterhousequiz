@@ -164,3 +164,20 @@ The Hogwarts Enrollment Q&A page includes:
 
 ### 总结
 通过更新网站的标题和描述，我们提高了网站在搜索引擎中的吸引力和点击率。新的标题更简洁明了，突出了"免费"测试的特点，使用了行动性语言("Take the Free Quiz Now!")来鼓励用户点击。新的描述包含更多关键词，同时保持了吸引力和信息量。关键词也进行了相应更新，更好地匹配新的标题和描述，有助于提高网站在相关搜索中的排名。这些更改仅影响英文版网站，其他语言版本保持不变。为确保网站内部一致性，我们同时更新了翻译文件和头部组件中的标题，使整个用户体验保持连贯。移除标题模板格式则确保了页面标题更加简洁，不会自动附加网站名称，这样在搜索引擎结果页面中更能吸引用户点击。
+
+## 2024-08-01: Investigating Missing Language Indexing
+
+*   **Issue:** Only English pages are indexed by Google Search Console, despite multilingual setup.
+*   **Findings:**
+    *   `sitemap.xml` includes all language versions and correct `hreflang` links (after correcting `jp` to `ja`).
+    *   `robots.txt` allows crawling of all language directories.
+    *   Internal linking (language switcher) seems okay.
+    *   **Root Cause Identified:** All pages (including non-English versions) have their `canonical` tag pointing to the English homepage (`https://harrypotterhousequiz.pro/`). This signals to Google that only the English homepage is the preferred version, preventing other languages from being indexed.
+*   **Next Step:** Modify the site's code/configuration to ensure each page's `canonical` tag points to its own URL. Waiting for user confirmation or request for specific implementation guidance.
+
+## 2024-08-01: Fixing Canonical Tag Implementation
+
+*   **Action:** Removed the manually added `<link rel="canonical" ...>` tag from the `<head>` section in `src/app/layout.tsx`.
+*   **Reason:** The `canonical` tag should be solely managed by Next.js's `generateMetadata` function via the `alternates.canonical` property. Manually adding it in the `<head>` can cause conflicts or override the intended dynamic behavior.
+*   **Expected Outcome:** This change ensures that each page correctly generates a `canonical` tag pointing to its own URL, resolving the issue identified previously.
+*   **Next Steps:** Deploy the change, request re-indexing in Google Search Console for affected pages, and monitor indexing status.

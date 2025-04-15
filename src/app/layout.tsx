@@ -207,11 +207,13 @@ export default function RootLayout({
         ))}
 
         {/* Add canonical link explicitly */}
+        {/*
         <link 
           rel="canonical" 
           href={hreflangLinks.find(link => 
             link.hrefLang === getLanguageTag(currentLang))?.href || ''}
         />
+        */}
 
         <script
           type="application/ld+json"
