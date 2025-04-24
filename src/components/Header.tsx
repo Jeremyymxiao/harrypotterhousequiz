@@ -44,60 +44,60 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
               href={language === 'en' ? '/quiz' : `/${language}/quiz`}
-              className={`text-amber-200 hover:text-amber-400 transition-colors text-xl ${
-                language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
-                language === 'jp' ? 'font-magic-jp' :
-                language === 'ko' ? 'font-magic-ko' :
-                language === 'ru' ? 'font-magic-ru' :
-                'font-harry'
+              className={`text-amber-200 hover:text-amber-400 transition-colors ${
+                language === 'zh' || language === 'zhHant' ? 'font-magic-zh text-xl' :
+                language === 'jp' ? 'font-magic-jp text-sm' :
+                language === 'ko' ? 'font-magic-ko text-xl' :
+                language === 'ru' ? 'font-magic-ru text-sm' :
+                'font-harry text-xl'
               }`}
             >
               {t.startQuiz}
             </Link>
             <Link 
               href={language === 'en' ? '/harry-potter-house-quiz-for-kids' : `/${language}/harry-potter-house-quiz-for-kids`}
-              className={`text-amber-200 hover:text-amber-400 transition-colors text-xl ${
-                language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
-                language === 'jp' ? 'font-magic-jp' :
-                language === 'ko' ? 'font-magic-ko' :
-                language === 'ru' ? 'font-magic-ru' :
-                'font-harry'
+              className={`text-amber-200 hover:text-amber-400 transition-colors ${
+                language === 'zh' || language === 'zhHant' ? 'font-magic-zh text-xl' :
+                language === 'jp' ? 'font-magic-jp text-sm' :
+                language === 'ko' ? 'font-magic-ko text-xl' :
+                language === 'ru' ? 'font-magic-ru text-sm' :
+                'font-harry text-xl'
               }`}
             >
               {t.quizForKids}
             </Link>
             <Link 
               href={language === 'en' ? '/sorting-hat-quiz' : `/${language}/sorting-hat-quiz`}
-              className={`text-amber-200 hover:text-amber-400 transition-colors text-xl ${
-                language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
-                language === 'jp' ? 'font-magic-jp' :
-                language === 'ko' ? 'font-magic-ko' :
-                language === 'ru' ? 'font-magic-ru' :
-                'font-harry'
+              className={`text-amber-200 hover:text-amber-400 transition-colors ${
+                language === 'zh' || language === 'zhHant' ? 'font-magic-zh text-xl' :
+                language === 'jp' ? 'font-magic-jp text-sm' :
+                language === 'ko' ? 'font-magic-ko text-xl' :
+                language === 'ru' ? 'font-magic-ru text-sm' :
+                'font-harry text-xl'
               }`}
             >
               {t.askSortingHat}
             </Link>
             <Link 
               href={language === 'en' ? '/hogwarts-enrollment-qa' : `/${language}/hogwarts-enrollment-qa`}
-              className={`text-amber-200 hover:text-amber-400 transition-colors text-xl ${
-                language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
-                language === 'jp' ? 'font-magic-jp' :
-                language === 'ko' ? 'font-magic-ko' :
-                language === 'ru' ? 'font-magic-ru' :
-                'font-harry'
+              className={`text-amber-200 hover:text-amber-400 transition-colors ${
+                language === 'zh' || language === 'zhHant' ? 'font-magic-zh text-xl' :
+                language === 'jp' ? 'font-magic-jp text-sm' :
+                language === 'ko' ? 'font-magic-ko text-xl' :
+                language === 'ru' ? 'font-magic-ru text-sm' :
+                'font-harry text-xl'
               }`}
             >
               {t.hogwartsEnrollment}
             </Link>
             <Link 
               href={language === 'en' ? '/patronus-quiz' : `/${language}/patronus-quiz`}
-              className={`text-amber-200 hover:text-amber-400 transition-colors text-xl ${
-                language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
-                language === 'jp' ? 'font-magic-jp' :
-                language === 'ko' ? 'font-magic-ko' :
-                language === 'ru' ? 'font-magic-ru' :
-                'font-harry'
+              className={`text-amber-200 hover:text-amber-400 transition-colors ${
+                language === 'zh' || language === 'zhHant' ? 'font-magic-zh text-xl' :
+                language === 'jp' ? 'font-magic-jp text-sm' :
+                language === 'ko' ? 'font-magic-ko text-xl' :
+                language === 'ru' ? 'font-magic-ru text-sm' :
+                'font-harry text-xl'
               }`}
             >
               {t.patronusQuiz}
@@ -121,12 +121,12 @@ const Header = () => {
             <nav className="flex flex-col space-y-4 py-4">
               <Link 
                 href={language === 'en' ? '/quiz' : `/${language}/quiz`}
-                className={`text-amber-200 hover:text-amber-400 transition-colors text-xl text-center ${
-                  language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
-                  language === 'jp' ? 'font-magic-jp' :
-                  language === 'ko' ? 'font-magic-ko' :
-                  language === 'ru' ? 'font-magic-ru' :
-                  'font-harry'
+                className={`text-amber-200 hover:text-amber-400 transition-colors text-center ${
+                  language === 'zh' || language === 'zhHant' ? 'font-magic-zh text-xl' :
+                  language === 'jp' ? 'font-magic-jp text-sm' :
+                  language === 'ko' ? 'font-magic-ko text-xl' :
+                  language === 'ru' ? 'font-magic-ru text-sm' :
+                  'font-harry text-xl'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -134,12 +134,12 @@ const Header = () => {
               </Link>
               <Link 
                 href={language === 'en' ? '/harry-potter-house-quiz-for-kids' : `/${language}/harry-potter-house-quiz-for-kids`}
-                className={`text-amber-200 hover:text-amber-400 transition-colors text-xl text-center ${
-                  language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
-                  language === 'jp' ? 'font-magic-jp' :
-                  language === 'ko' ? 'font-magic-ko' :
-                  language === 'ru' ? 'font-magic-ru' :
-                  'font-harry'
+                className={`text-amber-200 hover:text-amber-400 transition-colors text-center ${
+                  language === 'zh' || language === 'zhHant' ? 'font-magic-zh text-xl' :
+                  language === 'jp' ? 'font-magic-jp text-sm' :
+                  language === 'ko' ? 'font-magic-ko text-xl' :
+                  language === 'ru' ? 'font-magic-ru text-sm' :
+                  'font-harry text-xl'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -147,12 +147,12 @@ const Header = () => {
               </Link>
               <Link 
                 href={language === 'en' ? '/sorting-hat-quiz' : `/${language}/sorting-hat-quiz`}
-                className={`text-amber-200 hover:text-amber-400 transition-colors text-xl text-center ${
-                  language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
-                  language === 'jp' ? 'font-magic-jp' :
-                  language === 'ko' ? 'font-magic-ko' :
-                  language === 'ru' ? 'font-magic-ru' :
-                  'font-harry'
+                className={`text-amber-200 hover:text-amber-400 transition-colors text-center ${
+                  language === 'zh' || language === 'zhHant' ? 'font-magic-zh text-xl' :
+                  language === 'jp' ? 'font-magic-jp text-sm' :
+                  language === 'ko' ? 'font-magic-ko text-xl' :
+                  language === 'ru' ? 'font-magic-ru text-sm' :
+                  'font-harry text-xl'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -160,12 +160,12 @@ const Header = () => {
               </Link>
               <Link 
                 href={language === 'en' ? '/hogwarts-enrollment-qa' : `/${language}/hogwarts-enrollment-qa`}
-                className={`text-amber-200 hover:text-amber-400 transition-colors text-xl text-center ${
-                  language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
-                  language === 'jp' ? 'font-magic-jp' :
-                  language === 'ko' ? 'font-magic-ko' :
-                  language === 'ru' ? 'font-magic-ru' :
-                  'font-harry'
+                className={`text-amber-200 hover:text-amber-400 transition-colors text-center ${
+                  language === 'zh' || language === 'zhHant' ? 'font-magic-zh text-xl' :
+                  language === 'jp' ? 'font-magic-jp text-sm' :
+                  language === 'ko' ? 'font-magic-ko text-xl' :
+                  language === 'ru' ? 'font-magic-ru text-sm' :
+                  'font-harry text-xl'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -173,12 +173,12 @@ const Header = () => {
               </Link>
               <Link 
                 href={language === 'en' ? '/patronus-quiz' : `/${language}/patronus-quiz`}
-                className={`text-amber-200 hover:text-amber-400 transition-colors text-xl text-center ${
-                  language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
-                  language === 'jp' ? 'font-magic-jp' :
-                  language === 'ko' ? 'font-magic-ko' :
-                  language === 'ru' ? 'font-magic-ru' :
-                  'font-harry'
+                className={`text-amber-200 hover:text-amber-400 transition-colors text-center ${
+                  language === 'zh' || language === 'zhHant' ? 'font-magic-zh text-xl' :
+                  language === 'jp' ? 'font-magic-jp text-sm' :
+                  language === 'ko' ? 'font-magic-ko text-xl' :
+                  language === 'ru' ? 'font-magic-ru text-sm' :
+                  'font-harry text-xl'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
