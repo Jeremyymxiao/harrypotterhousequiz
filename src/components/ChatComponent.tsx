@@ -173,17 +173,17 @@ export default function ChatComponent() {
               alt={(() => {
                 switch(currentLang) {
                   case 'zh':
-                    return '分院帽'
+                    return '霍格沃茨魔法分院帽 - 互动聊天'
                   case 'ko':
-                    return '분류 모자'
+                    return '호그와트 마법 분류 모자 - 대화형 채팅'
                   case 'ru':
-                    return 'Распределяющая шляпа'
+                    return 'Волшебная Распределяющая Шляпа Хогвартса - Интерактивный Чат'
                   case 'jp':
-                    return '分院帽'
+                    return 'ホグワーツ魔法の分院帽 - インタラクティブチャット'
                   case 'pt':
-                    return '分院帽'
+                    return 'Chapéu Seletor Mágico de Hogwarts - Chat Interativo'
                   default:
-                    return 'Sorting Hat'
+                    return 'Hogwarts Magical Sorting Hat - Interactive Chat'
                 }
               })()}
               fill

@@ -3,9 +3,21 @@
 import React, { useState } from 'react'
 import QuizComponent from '@/components/QuizComponent'
 import Image from 'next/image'
+import Script from 'next/script'
+import { questions } from '@/data/questions'
 
 export default function QuizPage() {
   const [startQuiz, setStartQuiz] = useState(false)
+  
+  // Extrair perguntas e respostas para dados estruturados
+  const structuredDataQuestions = questions.map(question => ({
+    '@type': 'Question',
+    name: question.text.pt,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: question.answers.map(answer => answer.text.pt).join(', ')
+    }
+  }))
 
   if (startQuiz) {
     return (
@@ -18,6 +30,40 @@ export default function QuizPage() {
 
   return (
     <div className="quiz-bg min-h-screen w-full">
+      {/* JSON-LD dados estruturados */}
+      <Script
+        id="quiz-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Quiz',
+            name: 'Teste das Casas de Harry Potter',
+            description: 'Descubra a qual casa de Hogwarts você realmente pertence com nosso teste mágico do Chapéu Seletor. Responda às perguntas para revelar se você é um corajoso Grifinória, um leal Lufa-Lufa, um sábio Corvinal ou um ambicioso Sonserina.',
+            about: {
+              '@type': 'Thing',
+              name: 'Casas de Hogwarts de Harry Potter',
+              description: 'As quatro casas da Escola de Magia e Bruxaria de Hogwarts'
+            },
+            educationalAlignment: {
+              '@type': 'AlignmentObject',
+              alignmentType: 'educationalSubject',
+              targetName: 'Entretenimento'
+            },
+            author: {
+              '@type': 'Organization',
+              name: 'Equipe de Teste de Hogwarts'
+            },
+            provider: {
+              '@type': 'Organization',
+              name: 'Equipe de Teste de Hogwarts',
+              url: 'https://harrypotterhousequiz.pro/pt'
+            },
+            question: structuredDataQuestions
+          })
+        }}
+      />
+      
       {/* Magic Particles */}
       <div className="magic-particles" />
       

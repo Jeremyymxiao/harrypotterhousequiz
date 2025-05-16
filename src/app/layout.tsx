@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: any }) {
       case 'pt':
         return 'Teste da Casa de Hogwarts | Descubra sua Casa em Hogwarts';
       default:
-        return 'Find Your Hogwarts House - Take the Free Quiz Now!';
+        return 'Accurate Harry Potter House Quiz [2025 Update] - Discover Your Hogwarts House';
     }
   })();
   
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: { params: any }) {
       case 'pt':
         return 'Faça nosso teste mágico do Chapéu Seletor e descubra sua verdadeira casa em Hogwarts. Seja você um corajoso Grifinória, um sábio Corvinal, um leal Lufa-Lufa ou um ambicioso Sonserina, encontre seu verdadeiro lugar!';
       default:
-        return 'The ultimate Harry Potter House Quiz awaits! Discover your magical destiny as our enchanted Sorting Hat reveals if you belong in brave Gryffindor, cunning Slytherin, loyal Hufflepuff, or wise Ravenclaw!';
+        return 'The most accurate Harry Potter House Quiz awaits! Discover your magical destiny as our enchanted Sorting Hat reveals if you belong in brave Gryffindor, cunning Slytherin, loyal Hufflepuff, or wise Ravenclaw!';
     }
   })();
 

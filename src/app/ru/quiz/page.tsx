@@ -3,9 +3,21 @@
 import React, { useState } from 'react'
 import QuizComponent from '@/components/QuizComponent'
 import Image from 'next/image'
+import Script from 'next/script'
+import { questions } from '@/data/questions'
 
 export default function QuizPage() {
   const [startQuiz, setStartQuiz] = useState(false)
+
+  // Извлечение вопросов и ответов для структурированных данных
+  const structuredDataQuestions = questions.map(question => ({
+    '@type': 'Question',
+    name: question.text.ru,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: question.answers.map(answer => answer.text.ru).join(', ')
+    }
+  }))
 
   if (startQuiz) {
     return (
@@ -18,6 +30,40 @@ export default function QuizPage() {
 
   return (
     <div className="quiz-bg min-h-screen w-full">
+      {/* JSON-LD структурированные данные */}
+      <Script
+        id="quiz-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Quiz',
+            name: 'Тест на факультет Гарри Поттера',
+            description: 'Узнайте, к какому факультету Хогвартса вы действительно принадлежите с помощью нашего волшебного теста Распределяющей шляпы. Ответьте на вопросы и узнайте, вы храбрый Гриффиндорец, верный Пуффендуец, мудрый Когтевранец или амбициозный Слизеринец.',
+            about: {
+              '@type': 'Thing',
+              name: 'Факультеты Хогвартса из Гарри Поттера',
+              description: 'Четыре факультета Школы чародейства и волшебства Хогвартс'
+            },
+            educationalAlignment: {
+              '@type': 'AlignmentObject',
+              alignmentType: 'educationalSubject',
+              targetName: 'Развлечения'
+            },
+            author: {
+              '@type': 'Organization',
+              name: 'Команда теста Хогвартса'
+            },
+            provider: {
+              '@type': 'Organization',
+              name: 'Команда теста Хогвартса',
+              url: 'https://harrypotterhousequiz.pro/ru'
+            },
+            question: structuredDataQuestions
+          })
+        }}
+      />
+      
       {/* Magic Particles */}
       <div className="magic-particles" />
       

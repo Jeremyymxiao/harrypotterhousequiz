@@ -3,9 +3,21 @@
 import React, { useState } from 'react'
 import QuizComponent from '@/components/QuizComponent'
 import Image from 'next/image'
+import Script from 'next/script'
+import { questions } from '@/data/questions'
 
 export default function QuizPage() {
   const [startQuiz, setStartQuiz] = useState(false)
+
+  // 提取题目和答案，用于结构化数据
+  const structuredDataQuestions = questions.map(question => ({
+    '@type': 'Question',
+    name: question.text.zh,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: question.answers.map(answer => answer.text.zh).join(', ')
+    }
+  }))
 
   if (startQuiz) {
     return (
@@ -18,6 +30,40 @@ export default function QuizPage() {
 
   return (
     <div className="quiz-bg min-h-screen w-full">
+      {/* JSON-LD 结构化数据 */}
+      <Script
+        id="quiz-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Quiz',
+            name: '哈利波特学院测试',
+            description: '通过我们的魔法分院帽测试，发现你真正属于哪个霍格沃茨学院。回答问题，揭示你是勇敢的格兰芬多、忠诚的赫奇帕奇、睿智的拉文克劳还是野心勃勃的斯莱特林。',
+            about: {
+              '@type': 'Thing',
+              name: '哈利波特霍格沃茨学院',
+              description: '霍格沃茨魔法学校的四大学院'
+            },
+            educationalAlignment: {
+              '@type': 'AlignmentObject',
+              alignmentType: 'educationalSubject',
+              targetName: '娱乐'
+            },
+            author: {
+              '@type': 'Organization',
+              name: '霍格沃茨测试团队'
+            },
+            provider: {
+              '@type': 'Organization',
+              name: '霍格沃茨测试团队',
+              url: 'https://harrypotterhousequiz.pro/zh'
+            },
+            question: structuredDataQuestions
+          })
+        }}
+      />
+      
       {/* Magic Particles */}
       <div className="magic-particles" />
       

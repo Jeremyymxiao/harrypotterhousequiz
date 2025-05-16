@@ -3,9 +3,21 @@
 import React, { useState } from 'react'
 import QuizComponent from '@/components/QuizComponent'
 import Image from 'next/image'
+import Script from 'next/script'
+import { questions } from '@/data/questions'
 
 export default function QuizPage() {
   const [startQuiz, setStartQuiz] = useState(false)
+
+  // 問題と回答を抽出して構造化データを作成
+  const structuredDataQuestions = questions.map(question => ({
+    '@type': 'Question',
+    name: question.text.jp,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: question.answers.map(answer => answer.text.jp).join(', ')
+    }
+  }))
 
   if (startQuiz) {
     return (
@@ -18,6 +30,40 @@ export default function QuizPage() {
 
   return (
     <div className="quiz-bg min-h-screen w-full">
+      {/* JSON-LD 構造化データ */}
+      <Script
+        id="quiz-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Quiz',
+            name: 'ハリーポッター寮テスト',
+            description: '魔法の組分け帽子テストで、あなたが本当に属するホグワーツの寮を発見しましょう。質問に答えて、あなたが勇敢なグリフィンドール、忠実なハッフルパフ、賢明なレイブンクロー、野心的なスリザリンのどれに属するかを明らかにします。',
+            about: {
+              '@type': 'Thing',
+              name: 'ハリーポッターのホグワーツ寮',
+              description: 'ホグワーツ魔法魔術学校の四つの寮'
+            },
+            educationalAlignment: {
+              '@type': 'AlignmentObject',
+              alignmentType: 'educationalSubject',
+              targetName: 'エンターテイメント'
+            },
+            author: {
+              '@type': 'Organization',
+              name: 'ホグワーツテストチーム'
+            },
+            provider: {
+              '@type': 'Organization',
+              name: 'ホグワーツテストチーム',
+              url: 'https://harrypotterhousequiz.pro/jp'
+            },
+            question: structuredDataQuestions
+          })
+        }}
+      />
+      
       {/* Magic Particles */}
       <div className="magic-particles" />
       

@@ -3,9 +3,21 @@
 import React, { useState } from 'react'
 import QuizComponent from '@/components/QuizComponent'
 import Image from 'next/image'
+import Script from 'next/script'
+import { questions } from '@/data/questions'
 
 export default function QuizPage() {
   const [startQuiz, setStartQuiz] = useState(false)
+
+  // 提取题目和答案，用于结构化数据
+  const structuredDataQuestions = questions.map(question => ({
+    '@type': 'Question',
+    name: question.text.en,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: question.answers.map(answer => answer.text.en).join(', ')
+    }
+  }))
 
   if (startQuiz) {
     return (
@@ -18,6 +30,40 @@ export default function QuizPage() {
 
   return (
     <div className="quiz-bg min-h-screen w-full">
+      {/* JSON-LD 结构化数据 */}
+      <Script
+        id="quiz-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Quiz',
+            name: 'Harry Potter Hogwarts House Quiz',
+            description: 'Discover which Hogwarts house you truly belong to with our magical sorting hat quiz. Answer questions to reveal if you are a brave Gryffindor, loyal Hufflepuff, wise Ravenclaw, or ambitious Slytherin.',
+            about: {
+              '@type': 'Thing',
+              name: 'Harry Potter Hogwarts Houses',
+              description: 'The four houses of Hogwarts School of Witchcraft and Wizardry'
+            },
+            educationalAlignment: {
+              '@type': 'AlignmentObject',
+              alignmentType: 'educationalSubject',
+              targetName: 'Entertainment'
+            },
+            author: {
+              '@type': 'Organization',
+              name: 'Hogwarts Quiz Team'
+            },
+            provider: {
+              '@type': 'Organization',
+              name: 'Hogwarts Quiz Team',
+              url: 'https://harrypotterhousequiz.pro'
+            },
+            question: structuredDataQuestions
+          })
+        }}
+      />
+      
       {/* Magic Particles */}
       <div className="magic-particles" />
       

@@ -143,19 +143,19 @@ export default function PatronusResultPage() {
           <h2 className="text-xl text-blue-200 font-harry">Share Your Result</h2>
           
           <div className="flex gap-4">
-            <FacebookShareButton url={typeof window !== 'undefined' ? window.location.href : ''} hashtag="#HarryPotter">
+            <FacebookShareButton url={typeof window !== 'undefined' ? window.location.href : ''} hashtag="#HarryPotter" aria-label="Share on Facebook">
               <FacebookIcon size={40} round />
             </FacebookShareButton>
             
-            <TwitterShareButton url={typeof window !== 'undefined' ? window.location.href : ''} title={`My Patronus is a ${patronusData.displayName.en}! What's yours?`}>
+            <TwitterShareButton url={typeof window !== 'undefined' ? window.location.href : ''} title={`My Patronus is a ${patronusData.displayName.en}! What's yours?`} aria-label="Share on Twitter">
               <TwitterIcon size={40} round />
             </TwitterShareButton>
             
-            <WhatsappShareButton url={typeof window !== 'undefined' ? window.location.href : ''} title={`My Patronus is a ${patronusData.displayName.en}! What's yours?`}>
+            <WhatsappShareButton url={typeof window !== 'undefined' ? window.location.href : ''} title={`My Patronus is a ${patronusData.displayName.en}! What's yours?`} aria-label="Share on WhatsApp">
               <WhatsappIcon size={40} round />
             </WhatsappShareButton>
             
-            <RedditShareButton url={typeof window !== 'undefined' ? window.location.href : ''} title={`My Patronus is a ${patronusData.displayName.en}! What's yours?`}>
+            <RedditShareButton url={typeof window !== 'undefined' ? window.location.href : ''} title={`My Patronus is a ${patronusData.displayName.en}! What's yours?`} aria-label="Share on Reddit">
               <RedditIcon size={40} round />
             </RedditShareButton>
             

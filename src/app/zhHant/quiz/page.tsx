@@ -3,9 +3,21 @@
 import React, { useState } from 'react'
 import QuizComponent from '@/components/QuizComponent'
 import Image from 'next/image'
+import Script from 'next/script'
+import { questions } from '@/data/questions'
 
 export default function QuizPage() {
   const [startQuiz, setStartQuiz] = useState(false)
+
+  // 提取題目和答案，用於結構化數據
+  const structuredDataQuestions = questions.map(question => ({
+    '@type': 'Question',
+    name: question.text.zhHant,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: question.answers.map(answer => answer.text.zhHant).join(', ')
+    }
+  }))
 
   if (startQuiz) {
     return (
@@ -18,6 +30,40 @@ export default function QuizPage() {
 
   return (
     <div className="quiz-bg min-h-screen w-full">
+      {/* JSON-LD 結構化數據 */}
+      <Script
+        id="quiz-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Quiz',
+            name: '哈利波特學院測試',
+            description: '通過我們的魔法分類帽測試，發現你真正屬於哪個霍格華茲學院。回答問題，揭示你是勇敢的葛萊分多、忠誠的赫夫帕夫、睿智的雷文克勞還是野心勃勃的史萊哲林。',
+            about: {
+              '@type': 'Thing',
+              name: '哈利波特霍格華茲學院',
+              description: '霍格華茲魔法學校的四大學院'
+            },
+            educationalAlignment: {
+              '@type': 'AlignmentObject',
+              alignmentType: 'educationalSubject',
+              targetName: '娛樂'
+            },
+            author: {
+              '@type': 'Organization',
+              name: '霍格華茲測試團隊'
+            },
+            provider: {
+              '@type': 'Organization',
+              name: '霍格華茲測試團隊',
+              url: 'https://harrypotterhousequiz.pro/zhHant'
+            },
+            question: structuredDataQuestions
+          })
+        }}
+      />
+      
       {/* Magic Particles */}
       <div className="magic-particles" />
       

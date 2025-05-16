@@ -1,23 +1,78 @@
 import Link from 'next/link'
 import MagicCursor from '@/components/MagicCursor'
 import Image from 'next/image'
+import Script from 'next/script'
 
 export const metadata = {
-  title: "Find Your Hogwarts House - Take the Free Quiz Now!",
-  description: "The ultimate Harry Potter House Quiz awaits! Discover your magical destiny as our enchanted Sorting Hat reveals your true Hogwarts house!",
+  title: "Harry Potter House Quiz [2025 Updated] - Sorting Hat Awaits!",
+  description: "The most accurate Harry Potter House Quiz awaits! Discover your magical destiny as our enchanted Sorting Hat reveals your true Hogwarts house!",
   keywords: "Harry Potter House Quiz, Free Hogwarts House Quiz, Sorting Hat Test, Hogwarts Houses, Gryffindor, Slytherin, Hufflepuff, Ravenclaw, Find Your Hogwarts House",
   alternates: {
     canonical: 'https://harrypotterhousequiz.pro'
   },
   openGraph: {
-    title: "Find Your Hogwarts House - Take the Free Quiz Now!",
-    description: "The ultimate Harry Potter House Quiz awaits! Discover your magical destiny as our enchanted Sorting Hat reveals if you belong in brave Gryffindor, cunning Slytherin, loyal Hufflepuff, or wise Ravenclaw!"
+    title: "Harry Potter House Quiz [2025 Updated] - Sorting Hat Awaits!",
+    description: "The most accurate Harry Potter House Quiz awaits! Discover your magical destiny as our enchanted Sorting Hat reveals if you belong in brave Gryffindor, cunning Slytherin, loyal Hufflepuff, or wise Ravenclaw!"
   }
 }
 
 export default function Home() {
   return (
     <div className="magic-bg min-h-screen w-full">
+      {/* FAQ Structured Data */}
+      <Script
+        id="faq-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            'mainEntity': [
+              {
+                '@type': 'Question',
+                'name': 'How accurate is the Harry Potter House Quiz?',
+                'acceptedAnswer': {
+                  '@type': 'Answer',
+                  'text': 'Our Harry Potter House Quiz employs advanced personality analysis algorithms combined with house trait descriptions from J.K. Rowling\'s original series to ensure the results align with the sorting principles of the magical world. Our quiz has been validated by millions of Harry Potter fans with extremely high accuracy.'
+                }
+              },
+              {
+                '@type': 'Question',
+                'name': 'Can I retake the Harry Potter House Quiz?',
+                'acceptedAnswer': {
+                  '@type': 'Answer',
+                  'text': 'Absolutely! Just as the Sorting Hat takes your choice into account, you can retake the Harry Potter House Quiz anytime. People\'s personalities can change with time and experiences, so occasional retests might reveal evolving traits.'
+                }
+              },
+              {
+                '@type': 'Question',
+                'name': 'Why might my Harry Potter House Quiz result differ from what I expected?',
+                'acceptedAnswer': {
+                  '@type': 'Answer',
+                  'text': 'The Sorting Hat sees the essence of who we truly are deep inside, not just what we show on the surface or aspire to be. The Harry Potter House Quiz works similarly; it might discover qualities you weren\'t aware of. Remember, each house has its unique value and strengths—no house is better than the others.'
+                }
+              },
+              {
+                '@type': 'Question',
+                'name': 'How does the Sorting Hat AI conversation differ from the traditional Harry Potter House Quiz?',
+                'acceptedAnswer': {
+                  '@type': 'Answer',
+                  'text': 'The traditional Harry Potter House Quiz assesses your personality traits through a series of fixed questions. The Sorting Hat AI conversation, however, simulates interacting with the actual Sorting Hat; you can freely ask questions, share your thoughts and values, and the AI will judge the house that suits you best based on your responses. This provides a more personalized, interactive sorting experience.'
+                }
+              },
+              {
+                '@type': 'Question',
+                'name': 'What if my Harry Potter House Quiz result shows I fit multiple houses?',
+                'acceptedAnswer': {
+                  '@type': 'Answer',
+                  'text': 'Many witches and wizards have traits from multiple houses, which is completely normal! Just as Harry had both Gryffindor\'s courage and Slytherin\'s ambition. In such cases, the Sorting Hat typically considers your own preference. If your quiz results show strong traits for multiple houses, you can choose the house that appeals to you most or try the AI Sorting Hat conversation for a deeper analysis.'
+                }
+              }
+            ]
+          })
+        }}
+      />
+      
       <MagicCursor />
       {/* Magic Particles */}
       <div className="magic-particles" />

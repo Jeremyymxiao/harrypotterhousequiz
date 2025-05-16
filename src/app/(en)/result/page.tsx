@@ -198,6 +198,7 @@ export default function ResultPage() {
             url={shareUrl}
             hashtag="#HogwartsHouse"
             className="hover:opacity-80 transition-opacity"
+            aria-label="Share on Facebook"
           >
             <FacebookIcon size={40} round />
           </FacebookShareButton>
@@ -206,6 +207,7 @@ export default function ResultPage() {
             url={shareUrl}
             title={`I've been sorted into ${houseData.displayName[currentLang]} at Hogwarts! Take the quiz to find out your house! 🧙‍♂️✨`}
             className="hover:opacity-80 transition-opacity"
+            aria-label="Share on Twitter"
           >
             <TwitterIcon size={40} round />
           </TwitterShareButton>
@@ -214,6 +216,7 @@ export default function ResultPage() {
             url={shareUrl}
             title={`I've been sorted into ${houseData.displayName[currentLang]} at Hogwarts! Take the quiz to find out your house! 🧙‍♂️✨`}
             className="hover:opacity-80 transition-opacity"
+            aria-label="Share on WhatsApp"
           >
             <WhatsappIcon size={40} round />
           </WhatsappShareButton>
@@ -222,6 +225,7 @@ export default function ResultPage() {
             url={shareUrl}
             title={`I've been sorted into ${houseData.displayName[currentLang]} at Hogwarts! Take the quiz to find out your house! 🧙‍♂️✨`}
             className="hover:opacity-80 transition-opacity"
+            aria-label="Share on Reddit"
           >
             <RedditIcon size={40} round />
           </RedditShareButton>

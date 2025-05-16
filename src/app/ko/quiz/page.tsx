@@ -3,9 +3,21 @@
 import React, { useState } from 'react'
 import QuizComponent from '@/components/QuizComponent'
 import Image from 'next/image'
+import Script from 'next/script'
+import { questions } from '@/data/questions'
 
 export default function QuizPage() {
   const [startQuiz, setStartQuiz] = useState(false)
+
+  // 질문과 답변을 추출하여 구조화 데이터 생성
+  const structuredDataQuestions = questions.map(question => ({
+    '@type': 'Question',
+    name: question.text.ko,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: question.answers.map(answer => answer.text.ko).join(', ')
+    }
+  }))
 
   if (startQuiz) {
     return (
@@ -18,6 +30,40 @@ export default function QuizPage() {
 
   return (
     <div className="quiz-bg min-h-screen w-full">
+      {/* JSON-LD 구조화 데이터 */}
+      <Script
+        id="quiz-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Quiz',
+            name: '해리 포터 기숙사 테스트',
+            description: '마법의 분류 모자 테스트로 당신이 진정으로 속한 호그와트 기숙사를 발견하세요. 질문에 답하여 당신이 용감한 그리핀도르, 충성스러운 후플푸프, 현명한 레이븐클로, 야망 있는 슬리데린 중 어디에 속하는지 알아보세요.',
+            about: {
+              '@type': 'Thing',
+              name: '해리 포터 호그와트 기숙사',
+              description: '호그와트 마법학교의 네 개 기숙사'
+            },
+            educationalAlignment: {
+              '@type': 'AlignmentObject',
+              alignmentType: 'educationalSubject',
+              targetName: '엔터테인먼트'
+            },
+            author: {
+              '@type': 'Organization',
+              name: '호그와트 테스트 팀'
+            },
+            provider: {
+              '@type': 'Organization',
+              name: '호그와트 테스트 팀',
+              url: 'https://harrypotterhousequiz.pro/ko'
+            },
+            question: structuredDataQuestions
+          })
+        }}
+      />
+      
       {/* Magic Particles */}
       <div className="magic-particles" />
       
