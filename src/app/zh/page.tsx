@@ -72,12 +72,12 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Additional Sections */}
+      {/* Complete Magical Experience */}
       <section className="relative z-10 w-full px-4 py-16 bg-black/40">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-magic-zh text-amber-400 text-center mb-12">{zh.home.features.title}</h2>
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-magic-zh text-amber-400 text-center mb-12">完整的魔法体验</h2>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
               <h3 className="text-2xl font-magic-zh text-amber-400 mb-4">精准的哈利波特分院测试</h3>
               <p className="text-amber-200 font-magic-zh">我们的哈利波特分院测试基于深度心理学原理和原著人物特征分析，确保分院结果的准确性和权威性。每个问题都经过专业设计，能够精准识别你的核心特质。</p>
@@ -87,12 +87,20 @@ export default function Home() {
               <p className="text-amber-200 font-magic-zh">体验全新的分院方式！我们的AI分院帽可以与你进行真实对话，就像你真的坐在霍格沃茨的礼堂里接受分院一样。这是哈利波特分院测试的革新性体验！</p>
             </div>
             <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
-              <h3 className="text-2xl font-magic-zh text-amber-400 mb-4">详细的性格分析</h3>
-              <p className="text-amber-200 font-magic-zh">完成哈利波特分院测试后，你将收到一份详细的性格报告，解释为什么你属于特定学院，以及你与该学院著名角色的相似之处。了解你的魔法潜力和内在特质。</p>
+              <h3 className="text-2xl font-magic-zh text-blue-400 mb-4">守护神探索</h3>
+              <p className="text-amber-200 font-magic-zh">除了哈利波特分院测试，还可以发现你的魔法守护者！我们的守护神测试将揭示哪个神奇生物会保护你，为你的巫师身份增添另一层魔法维度。</p>
             </div>
             <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
-              <h3 className="text-2xl font-magic-zh text-amber-400 mb-4">霍格沃茨学院百科</h3>
-              <p className="text-amber-200 font-magic-zh">探索完整的霍格沃茨学院知识库！了解每个学院的创始历史、著名校友、共同特质以及学院独特的魔法传统。哈利波特分院测试不仅是分院，更是一次知识探索。</p>
+              <h3 className="text-2xl font-magic-zh text-purple-400 mb-4">儿童版分院测试</h3>
+              <p className="text-amber-200 font-magic-zh">专为年轻巫师设计的哈利波特分院测试！通过简化的问题和魔法插图，孩子们可以安全地以适合年龄的有趣方式发现自己的霍格沃茨学院。</p>
+            </div>
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-magic-zh text-red-400 mb-4">霍格沃茨入学指南</h3>
+              <p className="text-amber-200 font-magic-zh">用我们的全面指南完成哈利波特分院测试体验。了解关于加入世界上最著名的魔法学校的一切知识！</p>
+            </div>
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-magic-zh text-amber-400 mb-4">详细的性格分析</h3>
+              <p className="text-amber-200 font-magic-zh">完成哈利波特分院测试后，你将收到一份详细的性格报告，解释为什么你属于特定学院，以及你与该学院著名角色的相似之处。了解你的魔法潜力和内在特质。</p>
             </div>
           </div>
         </div>
@@ -200,6 +208,37 @@ export default function Home() {
             >
               与分院帽对话
             </Link>
+          </div>
+          
+          {/* 更多魔法冒险 */}
+          <div className="mt-8 pt-8 border-t border-amber-400/20">
+            <h3 className="text-2xl font-magic-zh text-amber-400 text-center mb-6">更多魔法冒险</h3>
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center">
+              <Link 
+                href="/zh/patronus-quiz"
+                className="magic-button px-6 py-3 text-lg font-magic-zh text-blue-200 border-2 border-blue-400 rounded-lg 
+                         hover:bg-blue-400/20 hover:transform hover:-translate-y-0.5 transition-all duration-300 
+                         backdrop-blur-sm bg-black/30 hover:shadow-[0_4px_12px_rgba(59,130,246,0.2)]"
+              >
+                发现你的守护神
+              </Link>
+              <Link 
+                href="/zh/harry-potter-house-quiz-for-kids"
+                className="magic-button px-6 py-3 text-lg font-magic-zh text-purple-200 border-2 border-purple-400 rounded-lg 
+                         hover:bg-purple-400/20 hover:transform hover:-translate-y-0.5 transition-all duration-300 
+                         backdrop-blur-sm bg-black/30 hover:shadow-[0_4px_12px_rgba(147,51,234,0.2)]"
+              >
+                儿童版测试
+              </Link>
+              <Link 
+                href="/zh/hogwarts-enrollment-qa"
+                className="magic-button px-6 py-3 text-lg font-magic-zh text-red-200 border-2 border-red-400 rounded-lg 
+                         hover:bg-red-400/20 hover:transform hover:-translate-y-0.5 transition-all duration-300 
+                         backdrop-blur-sm bg-black/30 hover:shadow-[0_4px_12px_rgba(239,68,68,0.2)]"
+              >
+                霍格沃茨入学
+              </Link>
+            </div>
           </div>
         </div>
       </section>

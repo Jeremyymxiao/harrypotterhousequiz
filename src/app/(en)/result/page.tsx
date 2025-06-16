@@ -19,6 +19,7 @@ import {
   RedditIcon,
 } from 'react-share'
 import { RiTiktokFill } from 'react-icons/ri'
+import TestRecommendations from '@/components/TestRecommendations'
 
 // Social media button component
 const SocialButton = ({ icon, onClick, label }: { icon: React.ReactNode; onClick: () => void; label: string }) => (
@@ -129,122 +130,134 @@ export default function ResultPage() {
   const houseData = HOUSES[house]
 
   return (
-    <main className="magic-bg min-h-screen flex items-center justify-center p-4">
+    <main className="magic-bg min-h-screen p-4">
       <div className="magic-particles" />
       
-      <div className="max-w-2xl w-full space-y-8 bg-black/40 backdrop-blur-sm rounded-xl p-8 text-center">
-        <h1 className="text-4xl font-bold text-amber-400 mb-6 floating font-harry tracking-wider">
-          {t.result.yourHouse}
-        </h1>
+      {/* 主要结果内容 */}
+      <div className="flex items-center justify-center min-h-screen py-8">
+        <div className="max-w-2xl w-full space-y-8 bg-black/40 backdrop-blur-sm rounded-xl p-8 text-center">
+          <h1 className="text-4xl font-bold text-amber-400 mb-6 floating font-harry tracking-wider">
+            {t.result.yourHouse}
+          </h1>
 
-        <div className="space-y-6 floating">
-          <div className="relative w-48 h-48 mx-auto mb-6">
-            <Image
-              src={`/images/houses/${house.toLowerCase()}-crest.png`}
-              alt={`${houseData.displayName[currentLang]} Crest`}
-              fill
-              className="object-contain"
-              priority
+          <div className="space-y-6 floating">
+            <div className="relative w-48 h-48 mx-auto mb-6">
+              <Image
+                src={`/images/houses/${house.toLowerCase()}-crest.png`}
+                alt={`${houseData.displayName[currentLang]} Crest`}
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            
+            <h2 className="text-5xl font-bold font-harry tracking-wide" style={{ 
+              color: houseData.colors.primary,
+              textShadow: `
+                2px 2px 0 ${houseData.colors.secondary},
+                -2px -2px 0 ${houseData.colors.secondary},
+                2px -2px 0 ${houseData.colors.secondary},
+                -2px 2px 0 ${houseData.colors.secondary},
+                0 0 10px rgba(255, 223, 0, 0.5)
+              `,
+              filter: 'brightness(1.2)'
+            }}>
+              {houseData.displayName[currentLang]}
+            </h2>
+            
+            <p className="text-3xl text-gray-300 font-harry tracking-wide">
+              {houseData.description[currentLang]}
+            </p>
+          </div>
+
+          <div className="pt-8 flex flex-col sm:flex-row justify-center items-center gap-4 sm:space-x-4">
+            <Link
+              href="/"
+              className="magic-button w-full sm:w-auto inline-block px-6 py-3 text-amber-100 bg-gradient-to-br from-stone-800 to-stone-900 rounded-lg hover:from-stone-700 hover:to-stone-800 transition-all duration-200 shadow-lg hover:shadow-amber-900/20 border border-stone-700"
+            >
+              {t.common.returnHome}
+            </Link>
+            
+            <Link
+              href="/quiz"
+              className="magic-button w-full sm:w-auto inline-block px-6 py-3 text-amber-100 bg-gradient-to-br from-amber-700 to-amber-900 rounded-lg hover:from-amber-600 hover:to-amber-800 transition-all duration-200 shadow-lg hover:shadow-amber-900/20 border border-amber-600"
+            >
+              {t.result.retake}
+            </Link>
+
+            <button
+              onClick={downloadResultCard}
+              disabled={isDownloading}
+              className={`magic-button w-full sm:w-auto inline-block px-6 py-3 text-amber-100 bg-gradient-to-br from-yellow-700 to-yellow-900 rounded-lg hover:from-yellow-600 hover:to-yellow-800 transition-all duration-200 shadow-lg hover:shadow-amber-900/20 border border-yellow-700 ${
+                isDownloading ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
+            >
+              {isDownloading ? 'Generating...' : 'Download Card'}
+            </button>
+          </div>
+
+          <div className="mt-6 flex justify-center space-x-4 flex-wrap gap-y-4">
+            <FacebookShareButton
+              url={shareUrl}
+              hashtag="#HogwartsHouse"
+              className="hover:opacity-80 transition-opacity"
+              aria-label="Share on Facebook"
+            >
+              <FacebookIcon size={40} round />
+            </FacebookShareButton>
+
+            <TwitterShareButton
+              url={shareUrl}
+              title={`I've been sorted into ${houseData.displayName[currentLang]} at Hogwarts! Take the quiz to find out your house! 🧙‍♂️✨`}
+              className="hover:opacity-80 transition-opacity"
+              aria-label="Share on Twitter"
+            >
+              <TwitterIcon size={40} round />
+            </TwitterShareButton>
+
+            <WhatsappShareButton
+              url={shareUrl}
+              title={`I've been sorted into ${houseData.displayName[currentLang]} at Hogwarts! Take the quiz to find out your house! 🧙‍♂️✨`}
+              className="hover:opacity-80 transition-opacity"
+              aria-label="Share on WhatsApp"
+            >
+              <WhatsappIcon size={40} round />
+            </WhatsappShareButton>
+
+            <RedditShareButton
+              url={shareUrl}
+              title={`I've been sorted into ${houseData.displayName[currentLang]} at Hogwarts! Take the quiz to find out your house! 🧙‍♂️✨`}
+              className="hover:opacity-80 transition-opacity"
+              aria-label="Share on Reddit"
+            >
+              <RedditIcon size={40} round />
+            </RedditShareButton>
+
+            <SocialButton
+              icon={<RiTiktokFill size={24} className="text-black" />}
+              onClick={handleTiktokShare}
+              label="Share on TikTok"
             />
           </div>
-          
-          <h2 className="text-5xl font-bold font-harry tracking-wide" style={{ 
-            color: houseData.colors.primary,
-            textShadow: `
-              2px 2px 0 ${houseData.colors.secondary},
-              -2px -2px 0 ${houseData.colors.secondary},
-              2px -2px 0 ${houseData.colors.secondary},
-              -2px 2px 0 ${houseData.colors.secondary},
-              0 0 10px rgba(255, 223, 0, 0.5)
-            `,
-            filter: 'brightness(1.2)'
-          }}>
-            {houseData.displayName[currentLang]}
-          </h2>
-          
-          <p className="text-3xl text-gray-300 font-harry tracking-wide">
-            {houseData.description[currentLang]}
-          </p>
+
+          {/* 隐藏的下载卡片 */}
+          <div className="fixed left-[-9999px]" ref={downloadCardRef}>
+            <DownloadCard 
+              house={house} 
+              houseData={houseData}
+              currentLang={currentLang}
+            />
+          </div>
         </div>
+      </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row justify-center items-center gap-4 sm:space-x-4">
-          <Link
-            href="/"
-            className="magic-button w-full sm:w-auto inline-block px-6 py-3 text-amber-100 bg-gradient-to-br from-stone-800 to-stone-900 rounded-lg hover:from-stone-700 hover:to-stone-800 transition-all duration-200 shadow-lg hover:shadow-amber-900/20 border border-stone-700"
-          >
-            {t.common.returnHome}
-          </Link>
-          
-          <Link
-            href="/quiz"
-            className="magic-button w-full sm:w-auto inline-block px-6 py-3 text-amber-100 bg-gradient-to-br from-amber-700 to-amber-900 rounded-lg hover:from-amber-600 hover:to-amber-800 transition-all duration-200 shadow-lg hover:shadow-amber-900/20 border border-amber-600"
-          >
-            {t.result.retake}
-          </Link>
-
-          <button
-            onClick={downloadResultCard}
-            disabled={isDownloading}
-            className={`magic-button w-full sm:w-auto inline-block px-6 py-3 text-amber-100 bg-gradient-to-br from-yellow-700 to-yellow-900 rounded-lg hover:from-yellow-600 hover:to-yellow-800 transition-all duration-200 shadow-lg hover:shadow-amber-900/20 border border-yellow-700 ${
-              isDownloading ? 'opacity-50 cursor-not-allowed' : ''
-            }`}
-          >
-            {isDownloading ? 'Generating...' : 'Download Card'}
-          </button>
-        </div>
-
-        <div className="mt-6 flex justify-center space-x-4 flex-wrap gap-y-4">
-          <FacebookShareButton
-            url={shareUrl}
-            hashtag="#HogwartsHouse"
-            className="hover:opacity-80 transition-opacity"
-            aria-label="Share on Facebook"
-          >
-            <FacebookIcon size={40} round />
-          </FacebookShareButton>
-
-          <TwitterShareButton
-            url={shareUrl}
-            title={`I've been sorted into ${houseData.displayName[currentLang]} at Hogwarts! Take the quiz to find out your house! 🧙‍♂️✨`}
-            className="hover:opacity-80 transition-opacity"
-            aria-label="Share on Twitter"
-          >
-            <TwitterIcon size={40} round />
-          </TwitterShareButton>
-
-          <WhatsappShareButton
-            url={shareUrl}
-            title={`I've been sorted into ${houseData.displayName[currentLang]} at Hogwarts! Take the quiz to find out your house! 🧙‍♂️✨`}
-            className="hover:opacity-80 transition-opacity"
-            aria-label="Share on WhatsApp"
-          >
-            <WhatsappIcon size={40} round />
-          </WhatsappShareButton>
-
-          <RedditShareButton
-            url={shareUrl}
-            title={`I've been sorted into ${houseData.displayName[currentLang]} at Hogwarts! Take the quiz to find out your house! 🧙‍♂️✨`}
-            className="hover:opacity-80 transition-opacity"
-            aria-label="Share on Reddit"
-          >
-            <RedditIcon size={40} round />
-          </RedditShareButton>
-
-          <SocialButton
-            icon={<RiTiktokFill size={24} className="text-black" />}
-            onClick={handleTiktokShare}
-            label="Share on TikTok"
-          />
-        </div>
-
-        {/* 隐藏的下载卡片 */}
-        <div className="fixed left-[-9999px]" ref={downloadCardRef}>
-          <DownloadCard 
-            house={house} 
-            houseData={houseData}
-            currentLang={currentLang}
-          />
-        </div>
+      {/* 测试推荐 - 放在主内容下方 */}
+      <div className="max-w-6xl mx-auto px-4 pb-16">
+        <TestRecommendations 
+          currentTest="result" 
+          maxItems={4}
+          className="bg-black/30 backdrop-blur-sm"
+        />
       </div>
     </main>
   )

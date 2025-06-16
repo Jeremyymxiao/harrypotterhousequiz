@@ -20,6 +20,7 @@ import {
   VKShareButton,
   VKIcon,
 } from 'react-share'
+import TestRecommendations from '@/components/TestRecommendations'
 
 // Компонент кнопки социальных сетей
 const SocialButton = ({ icon, onClick, label }: { icon: React.ReactNode; onClick: () => void; label: string }) => (
@@ -136,10 +137,12 @@ export default function ResultPage() {
   const houseData = HOUSES[house]
 
   return (
-    <main className="magic-bg min-h-screen flex items-center justify-center p-4">
+    <main className="magic-bg min-h-screen p-4">
       <div className="magic-particles" />
       
-      <div className="max-w-2xl w-full space-y-8 bg-black/40 backdrop-blur-sm rounded-xl p-8 text-center">
+      {/* Основное содержимое результата */}
+      <div className="flex items-center justify-center min-h-screen py-8">
+        <div className="max-w-2xl w-full space-y-8 bg-black/40 backdrop-blur-sm rounded-xl p-8 text-center">
         <h1 className="text-4xl font-bold text-amber-400 mb-6 floating font-harry tracking-wider">
           {t.result.yourHouse}
         </h1>
@@ -242,14 +245,24 @@ export default function ResultPage() {
           </VKShareButton>
         </div>
 
-        {/* Скрытая карточка для скачивания */}
-        <div className="fixed left-[-9999px]" ref={downloadCardRef}>
-          <DownloadCard 
-            house={house} 
-            houseData={houseData}
-            currentLang={currentLang}
-          />
+          {/* Скрытая карточка для скачивания */}
+          <div className="fixed left-[-9999px]" ref={downloadCardRef}>
+            <DownloadCard 
+              house={house} 
+              houseData={houseData}
+              currentLang={currentLang}
+            />
+          </div>
         </div>
+      </div>
+
+      {/* Рекомендации тестов - размещены под основным содержимым */}
+      <div className="max-w-6xl mx-auto px-4 pb-16">
+        <TestRecommendations 
+          currentTest="result" 
+          maxItems={4}
+          className="bg-black/30 backdrop-blur-sm"
+        />
       </div>
     </main>
   )

@@ -62,6 +62,42 @@
     <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/hogwarts-enrollment-qa"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/hogwarts-enrollment-qa"/>
   </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/patronus-quiz</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/patronus-quiz"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/patronus-result</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/patronus-result"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/harry-potter-house-quiz-for-kids</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/harry-potter-house-quiz-for-kids"/>
+  </url>
 
   <!-- Chinese (Simplified) pages -->
   <url>
@@ -111,6 +147,54 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/sorting-hat-quiz"/>
     <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/sorting-hat-quiz"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/sorting-hat-quiz"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/zh/hogwarts-enrollment-qa</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/hogwarts-enrollment-qa"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/zh/patronus-quiz</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/patronus-quiz"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/zh/patronus-result</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/patronus-result"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/zh/harry-potter-house-quiz-for-kids</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/harry-potter-house-quiz-for-kids"/>
   </url>
 
   <!-- Chinese (Traditional) pages -->
@@ -162,6 +246,54 @@
     <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/sorting-hat-quiz"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/sorting-hat-quiz"/>
   </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/zhHant/hogwarts-enrollment-qa</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/hogwarts-enrollment-qa"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/zhHant/patronus-quiz</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/patronus-quiz"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/zhHant/patronus-result</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/patronus-result"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/zhHant/harry-potter-house-quiz-for-kids</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/harry-potter-house-quiz-for-kids"/>
+  </url>
 
   <!-- Korean pages -->
   <url>
@@ -211,6 +343,54 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/sorting-hat-quiz"/>
     <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/sorting-hat-quiz"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/sorting-hat-quiz"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ko/hogwarts-enrollment-qa</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/hogwarts-enrollment-qa"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ko/patronus-quiz</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/patronus-quiz"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ko/patronus-result</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/patronus-result"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ko/harry-potter-house-quiz-for-kids</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/harry-potter-house-quiz-for-kids"/>
   </url>
 
   <!-- Russian pages -->
@@ -262,6 +442,54 @@
     <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/sorting-hat-quiz"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/sorting-hat-quiz"/>
   </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ru/hogwarts-enrollment-qa</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/hogwarts-enrollment-qa"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ru/patronus-quiz</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/patronus-quiz"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ru/patronus-result</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/patronus-result"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/ru/harry-potter-house-quiz-for-kids</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/harry-potter-house-quiz-for-kids"/>
+  </url>
 
   <!-- Japanese pages -->
   <url>
@@ -312,6 +540,54 @@
     <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/sorting-hat-quiz"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/sorting-hat-quiz"/>
   </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/jp/hogwarts-enrollment-qa</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/hogwarts-enrollment-qa"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/jp/patronus-quiz</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/patronus-quiz"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/jp/patronus-result</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/patronus-result"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/jp/harry-potter-house-quiz-for-kids</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/harry-potter-house-quiz-for-kids"/>
+  </url>
 
   <!-- Portuguese pages -->
   <url>
@@ -361,5 +637,53 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/sorting-hat-quiz"/>
     <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/sorting-hat-quiz"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/sorting-hat-quiz"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/pt/hogwarts-enrollment-qa</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/hogwarts-enrollment-qa"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/hogwarts-enrollment-qa"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/pt/patronus-quiz</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/patronus-quiz"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/patronus-quiz"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/pt/patronus-result</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/patronus-result"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/patronus-result"/>
+  </url>
+  <url>
+    <loc>https://harrypotterhousequiz.pro/pt/harry-potter-house-quiz-for-kids</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harrypotterhousequiz.pro/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://harrypotterhousequiz.pro/zh/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="zhHant" href="https://harrypotterhousequiz.pro/zhHant/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://harrypotterhousequiz.pro/ko/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://harrypotterhousequiz.pro/ru/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="jp" href="https://harrypotterhousequiz.pro/jp/harry-potter-house-quiz-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://harrypotterhousequiz.pro/pt/harry-potter-house-quiz-for-kids"/>
   </url>
 </urlset> 

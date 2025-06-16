@@ -25,6 +25,7 @@ import {
   RedditIcon,
 } from 'react-share'
 import { RiTiktokFill } from 'react-icons/ri'
+import TestRecommendations from '@/components/TestRecommendations'
 
 const translations = { en, zh, 'zhHant': zhHant, ko, ru, jp, pt }
 
@@ -101,7 +102,11 @@ export default function PatronusResultPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4">
+    <main className="magic-bg min-h-screen p-4">
+      <div className="magic-particles" />
+      
+      {/* 主要结果内容 */}
+      <div className="flex items-center justify-center min-h-screen py-8">
       <div className="max-w-4xl w-full bg-gray-900/30 border-2 border-blue-400 rounded-2xl p-8 shadow-[0_0_20px_rgba(100,150,255,0.3)] backdrop-blur-md">
         <div className="text-center mb-8">
           <h1 className="text-3xl text-blue-200 mb-4 font-harry">Ваш Патронус - {patronusData.displayName[currentLang]}</h1>
@@ -178,6 +183,16 @@ export default function PatronusResultPage() {
           </Link>
         </div>
       </div>
-    </div>
+      </div>
+
+      {/* 测试推荐 - 放在主内容下方 */}
+      <div className="max-w-6xl mx-auto px-4 pb-16">
+        <TestRecommendations 
+          currentTest="patronus" 
+          maxItems={4}
+          className="bg-black/30 backdrop-blur-sm"
+        />
+      </div>
+    </main>
   )
 } 

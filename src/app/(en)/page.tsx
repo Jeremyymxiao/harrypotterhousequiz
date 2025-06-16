@@ -146,10 +146,10 @@ export default function Home() {
 
       {/* Magical Features */}
       <section className="relative z-10 w-full px-4 py-16 bg-black/40">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-harry text-amber-400 text-center mb-12">Magical Features</h2>
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-harry text-amber-400 text-center mb-12">Complete Magical Experience</h2>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
               <h3 className="text-2xl font-harry text-amber-400 mb-4">Precise Harry Potter House Quiz</h3>
               <p className="text-amber-200 font-harry">Our Harry Potter House Quiz is based on deep psychological principles and character analysis from the original series, ensuring accuracy and authenticity in your results. Each question is professionally designed to identify your core traits.</p>
@@ -159,12 +159,20 @@ export default function Home() {
               <p className="text-amber-200 font-harry">Experience a revolutionary way to be sorted! Our AI Sorting Hat can have a real conversation with you, just as if you were sitting in the Great Hall at Hogwarts. This is a groundbreaking Harry Potter House Quiz experience!</p>
             </div>
             <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
-              <h3 className="text-2xl font-harry text-amber-400 mb-4">Detailed Personality Analysis</h3>
-              <p className="text-amber-200 font-harry">After completing the Harry Potter House Quiz, you'll receive a detailed personality report explaining why you belong to a specific house and your similarities with famous characters from that house. Understand your magical potential and inner traits.</p>
+              <h3 className="text-2xl font-harry text-blue-400 mb-4">Patronus Discovery</h3>
+              <p className="text-amber-200 font-harry">Beyond the Harry Potter House Quiz, discover your magical guardian! Our Patronus quiz reveals which magical creature will protect you, adding another layer to your wizarding identity and magical journey.</p>
             </div>
             <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
-              <h3 className="text-2xl font-harry text-amber-400 mb-4">Hogwarts Houses Encyclopedia</h3>
-              <p className="text-amber-200 font-harry">Explore a complete knowledge base of the Hogwarts houses! Learn about each house's founding history, famous alumni, common traits, and unique magical traditions. The Harry Potter House Quiz is not just sorting—it's a journey of discovery.</p>
+              <h3 className="text-2xl font-harry text-purple-400 mb-4">Kids Harry Potter House Quiz</h3>
+              <p className="text-amber-200 font-harry">A specially designed Harry Potter House Quiz for young wizards! With simplified questions and magical illustrations, children can safely discover their Hogwarts house in a fun, age-appropriate way.</p>
+            </div>
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-harry text-red-400 mb-4">Hogwarts Enrollment Guide</h3>
+              <p className="text-amber-200 font-harry">Complete your Harry Potter House Quiz experience with our comprehensive guide to Hogwarts admission. Learn everything about joining the most famous wizarding school in the world!</p>
+            </div>
+            <div className="bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+              <h3 className="text-2xl font-harry text-amber-400 mb-4">Detailed Personality Analysis</h3>
+              <p className="text-amber-200 font-harry">After completing the Harry Potter House Quiz, you'll receive a detailed personality report explaining why you belong to a specific house and your similarities with famous characters from that house. Understand your magical potential and inner traits.</p>
             </div>
           </div>
         </div>
@@ -273,6 +281,37 @@ export default function Home() {
             >
               Chat with Sorting Hat
             </Link>
+          </div>
+          
+          {/* 更多测试快捷链接 */}
+          <div className="mt-12 pt-8 border-t border-amber-400/30">
+            <p className="text-amber-300 text-lg font-harry mb-6 text-center">Explore More Magical Adventures</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+              <Link 
+                href="/patronus-quiz"
+                className="magic-button px-6 py-4 text-lg font-semibold text-blue-200 border-2 border-blue-400 rounded-lg 
+                         hover:bg-blue-400/20 hover:transform hover:-translate-y-0.5 transition-all duration-300 
+                         backdrop-blur-sm bg-black/30 hover:shadow-[0_4px_12px_rgba(59,130,246,0.2)] font-harry text-center"
+              >
+                Discover Your Patronus
+              </Link>
+              <Link 
+                href="/harry-potter-house-quiz-for-kids"
+                className="magic-button px-6 py-4 text-lg font-semibold text-purple-200 border-2 border-purple-400 rounded-lg 
+                         hover:bg-purple-400/20 hover:transform hover:-translate-y-0.5 transition-all duration-300 
+                         backdrop-blur-sm bg-black/30 hover:shadow-[0_4px_12px_rgba(147,51,234,0.2)] font-harry text-center"
+              >
+                Kids House Quiz
+              </Link>
+              <Link 
+                href="/hogwarts-enrollment-qa"
+                className="magic-button px-6 py-4 text-lg font-semibold text-red-200 border-2 border-red-400 rounded-lg 
+                         hover:bg-red-400/20 hover:transform hover:-translate-y-0.5 transition-all duration-300 
+                         backdrop-blur-sm bg-black/30 hover:shadow-[0_4px_12px_rgba(239,68,68,0.2)] font-harry text-center"
+              >
+                Hogwarts Enrollment
+              </Link>
+            </div>
           </div>
         </div>
       </section>

@@ -222,6 +222,37 @@ export default function Home() {
               분류 모자와 대화하기
             </Link>
           </div>
+          
+          {/* 더 많은 마법 모험 */}
+          <div className="mt-8 pt-8 border-t border-amber-400/20">
+            <h3 className="text-2xl font-magic-ko text-amber-400 text-center mb-6">더 많은 마법 모험</h3>
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center">
+              <Link 
+                href="/ko/patronus-quiz"
+                className="magic-button px-6 py-3 text-lg font-magic-ko text-blue-200 border-2 border-blue-400 rounded-lg 
+                         hover:bg-blue-400/20 hover:transform hover:-translate-y-0.5 transition-all duration-300 
+                         backdrop-blur-sm bg-black/30 hover:shadow-[0_4px_12px_rgba(59,130,246,0.2)]"
+              >
+                패트로누스 발견
+              </Link>
+              <Link 
+                href="/ko/harry-potter-house-quiz-for-kids"
+                className="magic-button px-6 py-3 text-lg font-magic-ko text-purple-200 border-2 border-purple-400 rounded-lg 
+                         hover:bg-purple-400/20 hover:transform hover:-translate-y-0.5 transition-all duration-300 
+                         backdrop-blur-sm bg-black/30 hover:shadow-[0_4px_12px_rgba(147,51,234,0.2)]"
+              >
+                어린이 테스트
+              </Link>
+              <Link 
+                href="/ko/hogwarts-enrollment-qa"
+                className="magic-button px-6 py-3 text-lg font-magic-ko text-red-200 border-2 border-red-400 rounded-lg 
+                         hover:bg-red-400/20 hover:transform hover:-translate-y-0.5 transition-all duration-300 
+                         backdrop-blur-sm bg-black/30 hover:shadow-[0_4px_12px_rgba(239,68,68,0.2)]"
+              >
+                호그와트 입학
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>

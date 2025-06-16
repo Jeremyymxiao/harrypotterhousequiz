@@ -222,6 +222,37 @@ export default function Home() {
               Поговорить с Распределяющей Шляпой
             </Link>
           </div>
+          
+          {/* Больше магических приключений */}
+          <div className="mt-8 pt-8 border-t border-amber-400/20">
+            <h3 className="text-2xl font-magic-ru text-amber-400 text-center mb-6">Больше магических приключений</h3>
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center">
+              <Link 
+                href="/ru/patronus-quiz"
+                className="magic-button px-6 py-3 text-lg font-magic-ru text-blue-200 border-2 border-blue-400 rounded-lg 
+                         hover:bg-blue-400/20 hover:transform hover:-translate-y-0.5 transition-all duration-300 
+                         backdrop-blur-sm bg-black/30 hover:shadow-[0_4px_12px_rgba(59,130,246,0.2)]"
+              >
+                Найти Патронуса
+              </Link>
+              <Link 
+                href="/ru/harry-potter-house-quiz-for-kids"
+                className="magic-button px-6 py-3 text-lg font-magic-ru text-purple-200 border-2 border-purple-400 rounded-lg 
+                         hover:bg-purple-400/20 hover:transform hover:-translate-y-0.5 transition-all duration-300 
+                         backdrop-blur-sm bg-black/30 hover:shadow-[0_4px_12px_rgba(147,51,234,0.2)]"
+              >
+                Тест для детей
+              </Link>
+              <Link 
+                href="/ru/hogwarts-enrollment-qa"
+                className="magic-button px-6 py-3 text-lg font-magic-ru text-red-200 border-2 border-red-400 rounded-lg 
+                         hover:bg-red-400/20 hover:transform hover:-translate-y-0.5 transition-all duration-300 
+                         backdrop-blur-sm bg-black/30 hover:shadow-[0_4px_12px_rgba(239,68,68,0.2)]"
+              >
+                Поступление в Хогвартс
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>
