@@ -8,6 +8,11 @@ const nextConfig = {
   env: {
     DEEPSEEK_API_KEY: process.env.DEEPSEEK_API_KEY,
   },
+  i18n: {
+    locales: ['en', 'zh', 'zhHant', 'ko', 'ru', 'jp', 'pt'],
+    defaultLocale: 'en',
+    localeDetection: false,
+  },
 }
 
 module.exports = nextConfig 

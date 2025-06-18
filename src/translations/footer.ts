@@ -1,37 +1,44 @@
 export const footerTranslations = {
   en: {
-    disclaimer: 'Disclaimer',
+    termsOfService: 'Terms of Service',
     privacyPolicy: 'Privacy Policy',
+    aboutUs: 'About Us',
     bentoProfile: 'Bento Profile',
   },
   jp: {
-    disclaimer: '免責事項',
+    termsOfService: '利用規約',
     privacyPolicy: 'プライバシーポリシー',
+    aboutUs: '私たちについて',
     bentoProfile: 'Bentoプロフィール',
   },
   ko: {
-    disclaimer: '면책 조항',
+    termsOfService: '이용약관',
     privacyPolicy: '개인정보 처리방침',
+    aboutUs: '소개',
     bentoProfile: 'Bento 프로필',
   },
   pt: {
-    disclaimer: 'Aviso Legal',
+    termsOfService: 'Termos de Serviço',
     privacyPolicy: 'Política de Privacidade',
+    aboutUs: 'Sobre Nós',
     bentoProfile: 'Perfil Bento',
   },
   ru: {
-    disclaimer: 'Отказ от ответственности',
+    termsOfService: 'Условия использования',
     privacyPolicy: 'Политика конфиденциальности',
+    aboutUs: 'О нас',
     bentoProfile: 'Профиль Bento',
   },
   zh: {
-    disclaimer: '免责声明',
+    termsOfService: '服务条款',
     privacyPolicy: '隐私政策',
+    aboutUs: '关于我们',
     bentoProfile: 'Bento 主页',
   },
   zhHant: {
-    disclaimer: '免責聲明',
+    termsOfService: '服務條款',
     privacyPolicy: '隱私政策',
+    aboutUs: '關於我們',
     bentoProfile: 'Bento 主頁',
   },
 } 

@@ -33,10 +33,10 @@ const Footer = () => {
             © {new Date().getFullYear()} Harry Potter House Quiz
           </p>
           
-          {/* Links */}
-          <div className="flex justify-center space-x-4 text-sm">
+          {/* Links - All languages point to English versions */}
+          <div className="flex justify-center space-x-4 text-sm flex-wrap">
             <Link 
-              href={language === 'en' ? '/disclaimer' : `/${language}/disclaimer`}
+              href="/about-us"
               className={`text-amber-400 hover:text-amber-300 transition-colors ${
                 language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
                 language === 'jp' ? 'font-magic-jp' :
@@ -45,11 +45,24 @@ const Footer = () => {
                 'font-harry'
               }`}
             >
-              {t.disclaimer}
+              {t.aboutUs}
             </Link>
             <span className="text-amber-200">•</span>
             <Link 
-              href={language === 'en' ? '/privacy-policy' : `/${language}/privacy-policy`}
+              href="/terms-of-service"
+              className={`text-amber-400 hover:text-amber-300 transition-colors ${
+                language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
+                language === 'jp' ? 'font-magic-jp' :
+                language === 'ko' ? 'font-magic-ko' :
+                language === 'ru' ? 'font-magic-ru' :
+                'font-harry'
+              }`}
+            >
+              {t.termsOfService}
+            </Link>
+            <span className="text-amber-200">•</span>
+            <Link 
+              href="/privacy-policy"
               className={`text-amber-400 hover:text-amber-300 transition-colors ${
                 language === 'zh' || language === 'zhHant' ? 'font-magic-zh' :
                 language === 'jp' ? 'font-magic-jp' :

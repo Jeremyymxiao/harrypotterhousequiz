@@ -7,7 +7,12 @@ const ROUTES = [
   'quiz',
   'result',
   'sorting-hat-quiz',
-  'hogwarts-enrollment-qa'
+  'hogwarts-enrollment-qa',
+  'patronus-quiz',
+  'patronus-result',
+  'harry-potter-house-quiz-for-kids',
+  'privacy-policy',
+  'disclaimer'
 ];
 
 export default function sitemap() {
